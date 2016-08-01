@@ -13,7 +13,7 @@
 
 <h2>Description</h2>
 
-<blockquote>
+<blockquote class="top_info">
 <p><strong>Wondering about the user meta your theme and/or plugins might be creating?</strong></p>
 <p><strong>Want to find the name of a specific user meta key?</strong></p>
 <p><strong>Need some help debugging your user meta?</strong></p>

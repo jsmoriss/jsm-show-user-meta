@@ -23,14 +23,13 @@
 
 <h4>Available Filters</h4>
 
-<pre><code>jsm_sum_view_cap ( 'manage_options' ) &amp;mdash; The current user must have these capabilities to view the "User Meta" metabox (default: 'manage_options' ).
+<p>`jsm_sum_view_cap ( 'manage_options' )` &mdash; The current user must have these capabilities to view the "User Meta" metabox (default: 'manage_options' ).</p>
 
-jsm_sum_screen_base ( true, $screen_base ) &amp;mdash; Add the "User Meta" metabox to the editing page for user screen base (example: 'user-edit', 'profile').
+<p>`jsm_sum_screen_base ( true, $screen_base )` &mdash; Add the "User Meta" metabox to the editing page for user screen base (example: 'user-edit', 'profile').</p>
 
-jsm_sum_user_meta ( $user_meta, $user_obj ) &amp;mdash; The user meta array (unserialized) retrieved for display in the metabox.
+<p>`jsm_sum_user_meta ( $user_meta, $user_obj )` &mdash; The user meta array (unserialized) retrieved for display in the metabox.</p>
 
-jsm_sum_skip_keys ( $array ) &amp;mdash; An array of key name prefixes to ignore (default: 'closedpostboxes_', 'meta-box-order_', 'metaboxhidden_', and 'screen_layout_' ).
-</code></pre>
+<p>`jsm_sum_skip_keys ( $array )` &mdash; An array of key name prefixes to ignore (default: 'closedpostboxes_', 'meta-box-order_', 'metaboxhidden_', and 'screen_layout_' ).</p>
 
 
 <h2>Installation</h2>

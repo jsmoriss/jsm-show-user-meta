@@ -13,23 +13,23 @@ Show all user meta (aka custom fields) keys and their unserialized values in a m
 
 == Description ==
 
-<blockquote class="top_info">
-<p><strong>Wondering about the user meta your theme and/or plugins might be creating?</strong></p>
-<p><strong>Want to find the name of a specific user meta key?</strong></p>
-<p><strong>Need some help debugging your user meta?</strong></p>
-</blockquote>
+<strong>Wondering about the user meta your theme and/or plugins might be creating?</strong>
+
+<strong>Want to find the name of a specific user meta key?</strong>
+
+<strong>Need some help debugging your user meta?</strong>
 
 The JSM's Show User Meta plugin displays all user meta (aka custom fields) keys and their unserialized values in a metabox on the bottom of user profile editing pages.
 
 = Available Filters =
 
-<p><code>jsm_sum_view_cap ( 'manage_options' )</code> &mdash; The current user must have these capabilities to view the "User Meta" metabox (default: 'manage_options' ).</p>
+<p> <code>jsm_sum_view_cap ( 'manage_options' )</code> &mdash; The current user must have these capabilities to view the "User Meta" metabox (default: 'manage_options' ).</p>
 
-<p><code>jsm_sum_screen_base ( true, $screen_base )</code> &mdash; Add the "User Meta" metabox to the editing page for user screen base (example: 'user-edit', 'profile').</p>
+<p> <code>jsm_sum_screen_base ( true, $screen_base )</code> &mdash; Add the "User Meta" metabox to the editing page for user screen base (example: 'user-edit', 'profile').</p>
 
-<p><code>jsm_sum_user_meta ( $user_meta, $user_obj )</code> &mdash; The user meta array (unserialized) retrieved for display in the metabox.</p>
+<p> <code>jsm_sum_user_meta ( $user_meta, $user_obj )</code> &mdash; The user meta array (unserialized) retrieved for display in the metabox.</p>
 
-<p><code>jsm_sum_skip_keys ( $array )</code> &mdash; An array of key name prefixes to ignore (default: 'closedpostboxes_', 'meta-box-order_', 'metaboxhidden_', and 'screen_layout_' ).</p>
+<p> <code>jsm_sum_skip_keys ( $array )</code> &mdash; An array of key name prefixes to ignore (default: 'closedpostboxes_', 'meta-box-order_', 'metaboxhidden_', and 'screen_layout_' ).</p>
 
 == Installation ==
 

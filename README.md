@@ -23,13 +23,13 @@
 
 <h4>Available Filters</h4>
 
-<p> <code>jsm_sum_view_cap ( 'manage_options' )</code> &mdash; The current user must have these capabilities to view the "User Meta" metabox (default: 'manage_options' ).</p>
+<p><em>jsm_sum_view_cap ( 'manage_options' )</em> &mdash; The current user must have these capabilities to view the "User Meta" metabox (default: 'manage_options' ).</p></p>
 
-<p> <code>jsm_sum_screen_base ( true, $screen_base )</code> &mdash; Add the "User Meta" metabox to the editing page for user screen base (example: 'user-edit', 'profile').</p>
+<p><em>jsm_sum_screen_base ( true, $screen_base )</em> &mdash; Add the "User Meta" metabox to the editing page for user screen base (example: 'user-edit', 'profile').</p></p>
 
-<p> <code>jsm_sum_user_meta ( $user_meta, $user_obj )</code> &mdash; The user meta array (unserialized) retrieved for display in the metabox.</p>
+<p><em>jsm_sum_user_meta ( $user_meta, $user_obj )</em> &mdash; The user meta array (unserialized) retrieved for display in the metabox.</p></p>
 
-<p> <code>jsm_sum_skip_keys ( $array )</code> &mdash; An array of key name prefixes to ignore (default: 'closedpostboxes_', 'meta-box-order_', 'metaboxhidden_', and 'screen_layout_' ).</p>
+<p><em>jsm_sum_skip_keys ( $array )</em> &mdash; An array of key name prefixes to ignore (default: 'closedpostboxes_', 'meta-box-order_', 'metaboxhidden_', and 'screen_layout_' ).</p></p>
 
 
 <h2>Installation</h2>

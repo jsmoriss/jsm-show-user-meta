@@ -7,7 +7,7 @@ License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
 Requires At Least: 3.0
 Tested up to: 4.6
-Stable tag: 1.0.0-1
+Stable tag: 1.0.1-1
 
 Show all user meta (aka custom fields) keys and their unserialized values in a metabox on user profile editing pages.
 

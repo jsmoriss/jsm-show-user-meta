@@ -2,7 +2,7 @@
 Plugin Name: JSM's Show User Meta
 Plugin Slug: jsm-show-user-meta
 Contributors: jsmoriss
-Tags: user meta, custom fields, tools
+Tags: meta, user meta, custom fields, debug, tools
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
 Requires At Least: 3.0

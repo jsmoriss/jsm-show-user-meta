@@ -5,8 +5,8 @@ Contributors: jsmoriss
 Tags: user meta, custom fields, tools
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
-Tested up to: 4.6
 Requires At Least: 3.0
+Tested up to: 4.6
 Stable tag: 1.0.0-1
 
 Show all user meta (aka custom fields) keys and their unserialized values in a metabox on user profile editing pages.
@@ -19,7 +19,7 @@ Show all user meta (aka custom fields) keys and their unserialized values in a m
 
 <strong>Need some help debugging your user meta?</strong>
 
-The JSM's Show User Meta plugin displays all user meta (aka custom fields) keys and their unserialized values in a metabox on the bottom of user profile editing pages.
+The JSM's Show User Meta plugin displays all user meta (aka custom fields) keys and their unserialized values in a metabox at the bottom of user profile editing pages.
 
 = Available Filters =
 
@@ -80,12 +80,13 @@ The JSM's Show User Meta plugin displays all user meta (aka custom fields) keys 
 
 = Changelog / Release Notes =
 
-**Version 1.0.0-1 (2016/07/30)**
+**Version 1.0.1-1 (2016/08/04)**
 
 * *New Features*
 	* Initial release.
 * *Improvements*
-	* None
+	* Added check for is_admin() before hooking actions and filters.
+	* Added 20% width in CSS for the key column.
 * *Bugfixes*
 	* None
 * *Developer Notes*
@@ -93,7 +94,7 @@ The JSM's Show User Meta plugin displays all user meta (aka custom fields) keys 
 
 == Upgrade Notice ==
 
-= 1.0.0-1 =
+= 1.0.1-1 =
 
-(2016/07/20) Initial release.
+(2016/08/04) Added check for is_admin() before hooking actions and filters. Added 20% width in CSS for the key column.
 

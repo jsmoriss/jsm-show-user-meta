@@ -6,7 +6,7 @@ Tags: user meta, custom fields, tools
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl.txt
 Tested up to: 4.6
-Requires At Least: 3.1
+Requires At Least: 3.0
 Stable tag: 1.0.0-1
 
 Show all user meta (aka custom fields) keys and their unserialized values in a metabox on user profile editing pages.

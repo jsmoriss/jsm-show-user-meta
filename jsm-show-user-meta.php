@@ -48,7 +48,7 @@ class JSM_Show_User_Meta {
 		$screen = get_current_screen();
 
 		if ( ! current_user_can( $this->view_cap, $user_obj->ID ) || 
-			! apply_filters( 'jsm_sum_screen_base', '__return_true', $screen->base ) )
+			! apply_filters( 'jsm_sum_screen_base', true, $screen->base ) )
 				return;
 
 		add_meta_box( 'jsm-sum', 'User Meta', 

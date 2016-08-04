@@ -6,9 +6,10 @@
  * Author URI: http://surniaulula.com/
  * License: GPLv3
  * License URI: http://www.gnu.org/licenses/gpl.txt
- * Description: Show all user meta (aka custom fields) keys and their unserialized values in a metabox on user profile pages.
+ * Description: Show all user meta (aka custom fields) keys and their unserialized values in a metabox on user profile editing pages.
+ * Requires At Least: 3.0
  * Tested Up To: 4.6
- * Version: 1.0.0-1
+ * Version: 1.0.1-1
  */
 
 class JSM_Show_User_Meta {
@@ -29,11 +30,20 @@ class JSM_Show_User_Meta {
 	}
 
 	private static function setup_actions() {
-		add_action( 'edit_user_profile', array( self::$instance, 'show_meta_boxes' ), 30 );
-		add_action( 'show_user_profile', array( self::$instance, 'show_meta_boxes' ), 30 );
+		if ( ! is_admin() )
+			return;
+
+		add_action( 'edit_user_profile', 
+			array( self::$instance, 'show_meta_boxes' ), 1000, 1 );
+
+		add_action( 'show_user_profile', 
+			array( self::$instance, 'show_meta_boxes' ), 1000, 1 );
 	}
 
 	public function show_meta_boxes( $user_obj ) {
+		if ( ! isset( $user_obj->ID ) )	// just in case
+			return;
+
 		$this->view_cap = apply_filters( 'jsm_sum_view_cap', 'manage_options' );
 		$screen = get_current_screen();
 
@@ -41,10 +51,12 @@ class JSM_Show_User_Meta {
 			! apply_filters( 'jsm_sum_screen_base', '__return_true', $screen->base ) )
 				return;
 
-		add_meta_box( 'jsm-sum', 'User Meta', array( &$this, 'show_user_meta' ), 'user', 'normal', 'low' );
+		add_meta_box( 'jsm-sum', 'User Meta', 
+			array( &$this, 'show_user_meta' ), 'jsm-sum-user', 'normal', 'low' );
 
+		echo '<h3 id="jsm-sum-metaboxes">Show User Meta</h3>';
 		echo '<div id="poststuff">';
-		do_meta_boxes( 'user', 'normal', $user_obj );
+		do_meta_boxes( 'jsm-sum-user', 'normal', $user_obj );
 		echo '</div><!-- .poststuff -->';
 	}
 
@@ -52,13 +64,17 @@ class JSM_Show_User_Meta {
 		if ( empty( $user_obj->ID ) )
 			return;
 
-		$user_meta = apply_filters( 'jsm_sum_user_meta', get_user_meta( $user_obj->ID ), $user_obj );
-		$skip_keys = apply_filters( 'jsm_sum_skip_keys', array(
-			'closedpostboxes_',
-			'meta-box-order_',
-			'metaboxhidden_',
-			'screen_layout_',
-		) );
+		$user_meta = apply_filters( 'jsm_sum_user_meta', 
+			get_user_meta( $user_obj->ID ), $user_obj );	// since wp v3.0
+
+		$skip_keys = apply_filters( 'jsm_sum_skip_keys', 
+			array(
+				'closedpostboxes_',
+				'meta-box-order_',
+				'metaboxhidden_',
+				'screen_layout_',
+			)
+		);
 
 		?>
 		<style>
@@ -76,6 +92,9 @@ class JSM_Show_User_Meta {
 				margin:0;
 				padding:0;
 				white-space:pre-wrap;
+			}
+			div#jsm-sum.postbox table .key-column { 
+				width:20%;
 			}
 		</style>
 		<table><thead><tr><th class="key-column">Key</th>

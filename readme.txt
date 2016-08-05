@@ -31,6 +31,11 @@ The JSM's Show User Meta plugin displays all user meta (aka custom fields) keys 
 
 *jsm_sum_skip_keys ( $array )* &mdash; An array of key name prefixes to ignore (default: 'closedpostboxes_', 'meta-box-order_', 'metaboxhidden_', and 'screen_layout_' ).</p>
 
+= Related Plugins =
+
+* [JSM's Show Post Meta](https://wordpress.org/plugins/jsm-show-post-meta/)
+* [JSM's Show Term Meta](https://wordpress.org/plugins/jsm-show-term-meta/) (requires WP v4.4 or better)
+
 == Installation ==
 
 = Automated Install =

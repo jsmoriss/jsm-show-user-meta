@@ -34,7 +34,7 @@ The JSM's Show User Meta plugin displays all user meta (aka custom fields) keys 
 = Related Plugins =
 
 * [JSM's Show Post Meta](https://wordpress.org/plugins/jsm-show-post-meta/)
-* [JSM's Show Term Meta](https://wordpress.org/plugins/jsm-show-term-meta/) (requires WP v4.4 or better)
+* [JSM's Show Term Meta](https://wordpress.org/plugins/jsm-show-term-meta/) (requires WordPress v4.4 or better)
 
 == Installation ==
 

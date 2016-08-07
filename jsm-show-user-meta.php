@@ -1,7 +1,10 @@
 <?php
 /*
  * Plugin Name: JSM's Show User Meta
- * Plugin URI: http://wordpress.org/extend/plugins/jsm-show-user-meta/
+ * Text Domain: jsm-show-user-meta
+ * Domain Path: /languages
+ * Plugin URI: http://surniaulula.com/extend/plugins/jsm-show-user-meta/
+ * Assets URI: https://jsmoriss.github.io/jsm-show-user-meta/assets/
  * Author: JS Morisset
  * Author URI: http://surniaulula.com/
  * License: GPLv3
@@ -18,9 +21,9 @@ class JSM_Show_User_Meta {
 
 	public $view_cap;
 
-	public static function instance() {
+	public static function &get_instance() {
 		if ( ! isset( self::$instance ) ) {
-			self::$instance = new JSM_Show_User_Meta;
+			self::$instance = new self;
 			self::setup_actions();
 		}
 		return self::$instance;
@@ -119,7 +122,7 @@ class JSM_Show_User_Meta {
 }
 
 function jsm_show_user_meta() {
-	return JSM_Show_User_Meta::instance();
+	return JSM_Show_User_Meta::get_instance();
 }
 
 add_action( 'plugins_loaded', 'jsm_show_user_meta' );

@@ -1,4 +1,4 @@
-<h1>JSM&#039;s Show User Meta on User Profile Editing Pages</h1>
+<h1>JSM&#039;s Show User Meta on User Editing Pages</h1>
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>JSM&#039;s Show User Meta</td></tr>

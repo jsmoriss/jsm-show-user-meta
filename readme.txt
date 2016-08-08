@@ -1,4 +1,4 @@
-=== JSM's Show User Meta ===
+=== JSM's Show User Meta on User Profile Editing Pages ===
 Plugin Name: JSM's Show User Meta
 Plugin Slug: jsm-show-user-meta
 Text Domain: jsm-show-user-meta

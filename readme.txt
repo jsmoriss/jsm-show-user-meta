@@ -23,7 +23,9 @@ Show all user meta (aka custom fields) keys and their unserialized values in a m
 
 <strong>Need some help debugging your user meta?</strong>
 
+<blockquote>
 The JSM's Show User Meta plugin displays all user meta (aka custom fields) keys and their unserialized values in a metabox at the bottom of user profile editing pages.
+</blockquote>
 
 = Plugin Settings =
 

@@ -4,7 +4,7 @@ Plugin Slug: jsm-show-user-meta
 Text Domain: jsm-show-user-meta
 Domain Path: /languages
 License: GPLv3
-License URI: http://www.gnu.org/licenses/gpl.txt
+License URI: https://www.gnu.org/licenses/gpl.txt
 Donate Link:
 Assets URI: https://jsmoriss.github.io/jsm-show-user-meta/assets/
 Tags: meta, user meta, custom fields, debug, tools

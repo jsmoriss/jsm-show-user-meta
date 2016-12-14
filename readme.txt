@@ -29,7 +29,7 @@ Show all user meta (aka custom fields) keys and their unserialized values in a m
 
 = Plugin Settings =
 
-There are no plugin settings - simply activate to add a metabox to all user profile editing pages.
+There are no plugin settings to update or adjust &mdash; simply activate to add a metabox to all user profile editing pages.
 
 = Developer Filters =
 

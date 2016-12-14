@@ -26,7 +26,7 @@
 
 <h4>Plugin Settings</h4>
 
-<p>There are no plugin settings - simply activate to add a metabox to all user profile editing pages.</p>
+<p>There are no plugin settings to update or adjust &mdash; simply activate to add a metabox to all user profile editing pages.</p>
 
 <h4>Developer Filters</h4>
 

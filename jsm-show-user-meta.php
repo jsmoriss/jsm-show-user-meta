@@ -44,6 +44,7 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 	class JSM_Show_User_Meta {
 
 		private static $instance;
+		private static $wp_min_version = 3.7;
 	
 		public $view_cap;
 	
@@ -55,13 +56,32 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 	
 		private function __construct() {
 			if ( is_admin() ) {
-				add_action( 'edit_user_profile', 
-					array( &$this, 'show_meta_boxes' ), 1000, 1 );
-				add_action( 'show_user_profile', 
-					array( &$this, 'show_meta_boxes' ), 1000, 1 );
+				load_plugin_textdomain( 'jsm-show-user-meta', false, 'jsm-show-user-meta/languages/' );
+
+				add_action( 'admin_init', array( __CLASS__, 'check_wp_version' ) );
+				add_action( 'edit_user_profile', array( &$this, 'show_meta_boxes' ), 1000, 1 );
+				add_action( 'show_user_profile', array( &$this, 'show_meta_boxes' ), 1000, 1 );
 			}
 		}
 	
+		public static function check_wp_version() {
+			global $wp_version;
+			if ( version_compare( $wp_version, self::$wp_min_version, '<' ) ) {
+				$plugin = plugin_basename( __FILE__ );
+				if ( is_plugin_active( $plugin ) ) {
+					require_once( ABSPATH.'wp-admin/includes/plugin.php' );	// just in case
+					$plugin_data = get_plugin_data( __FILE__, false );	// $markup = false
+					deactivate_plugins( $plugin );
+					wp_die( 
+						sprintf( __( '%1$s requires WordPress version %2$s or higher and has been deactivated.',
+							'jsm-show-user-meta' ), $plugin_data['Name'], self::$wp_min_version ).'<br/><br/>'.
+						sprintf( __( 'Please upgrade WordPress before trying to reactivate the %1$s plugin.',
+							'jsm-show-user-meta' ), $plugin_data['Name'] )
+					);
+				}
+			}
+		}
+
 		public function show_meta_boxes( $user_obj ) {
 			if ( ! isset( $user_obj->ID ) )	// just in case
 				return;
@@ -73,10 +93,10 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 				! apply_filters( 'jsm_sum_screen_base', true, $screen->base ) )
 					return;
 	
-			add_meta_box( 'jsm-sum', 'User Meta', 
+			add_meta_box( 'jsm-sum', __( 'User Meta', 'jsm-show-user-meta' ),
 				array( &$this, 'show_user_meta' ), 'jsm-sum-user', 'normal', 'low' );
 	
-			echo '<h3 id="jsm-sum-metaboxes">Show User Meta</h3>';
+			echo '<h3 id="jsm-sum-metaboxes">'.__( 'Show User Meta', 'jsm-show-term-meta' ).'</h3>';
 			echo '<div id="poststuff">';
 			do_meta_boxes( 'jsm-sum-user', 'normal', $user_obj );
 			echo '</div><!-- .poststuff -->';
@@ -89,14 +109,12 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 			$user_meta = apply_filters( 'jsm_sum_user_meta', 
 				get_user_meta( $user_obj->ID ), $user_obj );	// since wp v3.0
 	
-			$skip_keys = apply_filters( 'jsm_sum_skip_keys', 
-				array(
-					'closedpostboxes_',
-					'meta-box-order_',
-					'metaboxhidden_',
-					'screen_layout_',
-				)
-			);
+			$skip_keys = apply_filters( 'jsm_sum_skip_keys', array(
+				'closedpostboxes_',
+				'meta-box-order_',
+				'metaboxhidden_',
+				'screen_layout_',
+			) );
 	
 			?>
 			<style>
@@ -119,9 +137,10 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 					width:20%;
 				}
 			</style>
-			<table><thead><tr><th class="key-column">Key</th>
-			<th class="value-column">Value</th></tr></thead><tbody>
 			<?php
+	
+			echo '<table><thead><tr><th class="key-column">'.__( 'Key', 'jsm-show-user-meta' ).'</th>';
+			echo '<th class="value-column">'.__( 'Value', 'jsm-show-user-meta' ).'</th></tr></thead><tbody>';
 	
 			ksort( $user_meta );
 			foreach( $user_meta as $key => $arr ) {

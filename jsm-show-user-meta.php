@@ -110,10 +110,11 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 				get_user_meta( $user_obj->ID ), $user_obj );	// since wp v3.0
 	
 			$skip_keys = apply_filters( 'jsm_sum_skip_keys', array(
-				'closedpostboxes_',
-				'meta-box-order_',
-				'metaboxhidden_',
-				'screen_layout_',
+				'/^closedpostboxes_/',
+				'/columnshidden$/',
+				'/^meta-box-order_/',
+				'/^metaboxhidden_/',
+				'/^screen_layout_/',
 			) );
 	
 			?>
@@ -122,38 +123,42 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 					width:100%;
 					max-width:100%;
 					text-align:left;
+					table-layout:fixed;
+				}
+				div#jsm-sum.postbox table .key-column { 
+					width:30%;
 				}
 				div#jsm-sum.postbox table td { 
 					padding:10px;
 					vertical-align:top;
 					border:1px dotted #ccc;
 				}
-				div#jsm-sum.postbox table td pre { 
+				div#jsm-sum.postbox table td div {
+					overflow-x:auto;
+				}
+				div#jsm-sum.postbox table td div pre { 
 					margin:0;
 					padding:0;
-					white-space:pre-wrap;
-				}
-				div#jsm-sum.postbox table .key-column { 
-					width:20%;
 				}
 			</style>
 			<?php
 	
-			echo '<table><thead><tr><th class="key-column">'.__( 'Key', 'jsm-show-user-meta' ).'</th>';
-			echo '<th class="value-column">'.__( 'Value', 'jsm-show-user-meta' ).'</th></tr></thead><tbody>';
+			echo '<table><thead><tr><th class="key-column">'.__( 'Key', 'jsm-show-user-meta' ).'</th>'."\n";
+			echo '<th class="value-column">'.__( 'Value', 'jsm-show-user-meta' ).'</th></tr></thead><tbody>'."\n";
 	
 			ksort( $user_meta );
-			foreach( $user_meta as $key => $arr ) {
-				foreach ( $skip_keys as $dnsw )
-					if ( strpos( $key, $dnsw ) === 0 )
+			foreach( $user_meta as $meta_key => $arr ) {
+				foreach ( $skip_keys as $preg_dns )
+					if ( preg_match( $preg_dns, $meta_key ) )
 						continue 2;
 	
 				foreach ( $arr as $num => $el )
 					$arr[$num] = maybe_unserialize( $el );
 	
-				echo '<tr><td class="key-column">'.esc_html( $key ).'</td>'.
-					'<td class="value-column"><pre>'.
-						esc_html( var_export( $arr, true ) ).'</pre></td></tr>';
+				echo '<tr><td class="key-column"><div class="key-cell"><pre>'.
+					esc_html( $meta_key ).'</pre></div></td>';
+				echo '<td class="value-column"><div class="value-cell"><pre>'.
+					esc_html( var_export( $arr, true ) ).'</pre></div></td></tr>'."\n";
 			}
 			echo '</tbody></table>';
 		}

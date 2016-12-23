@@ -30,11 +30,11 @@ msgstr ""
 msgid "Show User Meta"
 msgstr ""
 
-#: jsm-show-user-meta.php:142
+#: jsm-show-user-meta.php:146
 msgid "Key"
 msgstr ""
 
-#: jsm-show-user-meta.php:143
+#: jsm-show-user-meta.php:147
 msgid "Value"
 msgstr ""
 

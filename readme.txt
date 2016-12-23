@@ -106,6 +106,17 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = Changelog / Release Notes =
 
+**Version 1.0.2-dev1 (2016/12/23)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* None
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* Maintenance release - minor refactoring of code.
+
 **Version 1.0.1-1 (2016/08/04)**
 
 * *New Features*
@@ -119,6 +130,10 @@ Note that the production stage level can be incremented on occasion for simple t
 	* None
 
 == Upgrade Notice ==
+
+= 1.0.2-dev1 =
+
+(2016/12/23) Maintenance release - minor refactoring of code.
 
 = 1.0.1-1 =
 

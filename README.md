@@ -20,23 +20,15 @@
 
 <p><strong>Need some help debugging your user meta?</strong></p>
 
-<blockquote>
 <p>The JSM's Show User Meta plugin displays all user meta (aka custom fields) keys and their unserialized values in a metabox at the bottom of user profile editing pages.</p>
+
+<blockquote>
+<p>There are no settings to update or adjust &mdash; simply install and activate the plugin.</p>
 </blockquote>
 
-<h4>Plugin Settings</h4>
+<h4>Developers</h4>
 
-<p>There are no settings to update or adjust &mdash; simply install and activate the plugin to add a metabox on all user profile editing pages.</p>
-
-<h4>Developer Filters</h4>
-
-<p><em>'jsm_sum_view_cap' ( 'manage_options' )</em> &mdash; The current user must have these capabilities to view the "User Meta" metabox (default: 'manage_options' ).</p></p>
-
-<p><em>'jsm_sum_screen_base' ( true, $screen_base )</em> &mdash; Add the "User Meta" metabox to the editing page for user screen base (example: 'user-edit', 'profile').</p></p>
-
-<p><em>'jsm_sum_user_meta' ( $user_meta, $user_obj )</em> &mdash; The user meta array (unserialized) retrieved for display in the metabox.</p></p>
-
-<p><em>'jsm_sum_skip_keys' ( $array )</em> &mdash; An array of key name prefixes to ignore (default: 'closedpostboxes_', 'meta-box-order_', 'metaboxhidden_', and 'screen_layout_' ).</p></p>
+<p>See the plugin <a href="https://wordpress.org/plugins/jsm-show-user-meta/other_notes/">Other Notes</a> page for available filters.</p>
 
 <h4>Related Plugins</h4>
 
@@ -89,7 +81,13 @@
 <h3>Other Notes</h3>
 <h4>Additional Documentation</h4>
 
-<ul>
-<li>None</li>
-</ul>
+<p><strong>Developer Filters</strong></p>
+
+<p><em>'jsm_sum_view_cap' ( 'manage_options' )</em> &mdash; The current user must have these capabilities to view the "User Meta" metabox (default: 'manage_options' ).</p></p>
+
+<p><em>'jsm_sum_screen_base' ( true, $screen_base )</em> &mdash; Add the "User Meta" metabox to the editing page for user screen base (example: 'user-edit', 'profile').</p></p>
+
+<p><em>'jsm_sum_user_meta' ( $user_meta, $user_obj )</em> &mdash; The user meta array (unserialized) retrieved for display in the metabox.</p></p>
+
+<p><em>'jsm_sum_skip_keys' ( $array )</em> &mdash; An array of key name regular expressions to ignore (default: '/^closedpostboxes_/', '/columnhidden$/', '/^meta-box-order_/', '/^metaboxhidden_/', and '/^screen_layout_/' ).</p></p>
 

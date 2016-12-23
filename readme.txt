@@ -23,23 +23,15 @@ Show all user meta (aka custom fields) keys and their unserialized values in a m
 
 <strong>Need some help debugging your user meta?</strong>
 
-<blockquote>
 <p>The JSM's Show User Meta plugin displays all user meta (aka custom fields) keys and their unserialized values in a metabox at the bottom of user profile editing pages.</p>
+
+<blockquote>
+<p>There are no settings to update or adjust &mdash; simply install and activate the plugin.</p>
 </blockquote>
 
-= Plugin Settings =
+= Developers =
 
-There are no settings to update or adjust &mdash; simply install and activate the plugin to add a metabox on all user profile editing pages.
-
-= Developer Filters =
-
-*'jsm_sum_view_cap' ( 'manage_options' )* &mdash; The current user must have these capabilities to view the "User Meta" metabox (default: 'manage_options' ).</p>
-
-*'jsm_sum_screen_base' ( true, $screen_base )* &mdash; Add the "User Meta" metabox to the editing page for user screen base (example: 'user-edit', 'profile').</p>
-
-*'jsm_sum_user_meta' ( $user_meta, $user_obj )* &mdash; The user meta array (unserialized) retrieved for display in the metabox.</p>
-
-*'jsm_sum_skip_keys' ( $array )* &mdash; An array of key name prefixes to ignore (default: 'closedpostboxes_', 'meta-box-order_', 'metaboxhidden_', and 'screen_layout_' ).</p>
+See the plugin [Other Notes](https://wordpress.org/plugins/jsm-show-user-meta/other_notes/) page for available filters.
 
 = Related Plugins =
 
@@ -80,7 +72,15 @@ There are no settings to update or adjust &mdash; simply install and activate th
 
 = Additional Documentation =
 
-* None
+**Developer Filters**
+
+*'jsm_sum_view_cap' ( 'manage_options' )* &mdash; The current user must have these capabilities to view the "User Meta" metabox (default: 'manage_options' ).</p>
+
+*'jsm_sum_screen_base' ( true, $screen_base )* &mdash; Add the "User Meta" metabox to the editing page for user screen base (example: 'user-edit', 'profile').</p>
+
+*'jsm_sum_user_meta' ( $user_meta, $user_obj )* &mdash; The user meta array (unserialized) retrieved for display in the metabox.</p>
+
+*'jsm_sum_skip_keys' ( $array )* &mdash; An array of key name regular expressions to ignore (default: '/^closedpostboxes_/', '/columnhidden$/', '/^meta-box-order_/', '/^metaboxhidden_/', and '/^screen_layout_/' ).</p>
 
 == Screenshots ==
 

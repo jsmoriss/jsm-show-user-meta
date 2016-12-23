@@ -11,7 +11,7 @@ Tags: meta, user meta, custom fields, debug, tools
 Contributors: jsmoriss
 Requires At Least: 3.7
 Tested Up To: 4.7
-Stable Tag: 1.0.1-1
+Stable Tag: 1.0.2-1
 
 Show all user meta (aka custom fields) keys and their unserialized values in a metabox on user profile editing pages.
 
@@ -112,6 +112,7 @@ Note that the production stage level can be incremented on occasion for simple t
 	* None
 * *Improvements*
 	* Added French translation of labels and notices.
+	* Updated CSS to scroll overflow of meta values.
 * *Bugfixes*
 	* None
 * *Developer Notes*
@@ -133,7 +134,7 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = 1.0.2-1 =
 
-(2016/12/23) Maintenance release - minor refactoring of code.
+(2016/12/23) Maintenance release - minor refactoring of code. Added French translation of labels and notices. Updated CSS to scroll overflow of meta values.
 
 = 1.0.1-1 =
 

@@ -106,6 +106,17 @@ Note that the production stage level can be incremented on occasion for simple t
 
 = Changelog / Release Notes =
 
+**Version 1.0.3-1 (2016/12/28)**
+
+* *New Features*
+	* None
+* *Improvements*
+	* Highlighted new user meta rows added by the 'jsm_sum_user_meta' filters.
+* *Bugfixes*
+	* None
+* *Developer Notes*
+	* None
+
 **Version 1.0.2-1 (2016/12/23)**
 
 * *New Features*
@@ -131,6 +142,10 @@ Note that the production stage level can be incremented on occasion for simple t
 	* None
 
 == Upgrade Notice ==
+
+= 1.0.3-1 =
+
+(2016/12/28) Highlighted new user meta rows added by the 'jsm_sum_user_meta' filters.
 
 = 1.0.2-1 =
 

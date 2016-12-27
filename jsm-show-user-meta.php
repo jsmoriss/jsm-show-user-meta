@@ -12,7 +12,7 @@
  * Description: Show all user meta (aka custom fields) keys and their unserialized values in a metabox on user profile editing pages.
  * Requires At Least: 3.7
  * Tested Up To: 4.7
- * Version: 1.0.2-1
+ * Version: 1.0.3-1
  *
  * Version Components: {major}.{minor}.{bugfix}-{stage}{level}
  *
@@ -96,7 +96,7 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 			add_meta_box( 'jsm-sum', __( 'User Meta', 'jsm-show-user-meta' ),
 				array( &$this, 'show_user_meta' ), 'jsm-sum-user', 'normal', 'low' );
 	
-			echo '<h3 id="jsm-sum-metaboxes">'.__( 'Show User Meta', 'jsm-show-term-meta' ).'</h3>';
+			echo '<h3 id="jsm-sum-metaboxes">'.__( 'Show User Meta', 'jsm-show-user-meta' ).'</h3>';
 			echo '<div id="poststuff">';
 			do_meta_boxes( 'jsm-sum-user', 'normal', $user_obj );
 			echo '</div><!-- .poststuff -->';
@@ -106,9 +106,8 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 			if ( empty( $user_obj->ID ) )
 				return;
 	
-			$user_meta = apply_filters( 'jsm_sum_user_meta', 
-				get_user_meta( $user_obj->ID ), $user_obj );	// since wp v3.0
-	
+			$user_meta = get_user_meta( $user_obj->ID );	// since wp v3.0
+			$user_meta_filtered = apply_filters( 'jsm_sum_user_meta', $user_meta, $user_obj );
 			$skip_keys = apply_filters( 'jsm_sum_skip_keys', array(
 				'/^closedpostboxes_/',
 				'/columnshidden$/',
@@ -128,6 +127,9 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 				div#jsm-sum.postbox table .key-column { 
 					width:30%;
 				}
+				div#jsm-stm.postbox table tr.added-meta { 
+					background-color:#eee;
+				}
 				div#jsm-sum.postbox table td { 
 					padding:10px;
 					vertical-align:top;
@@ -146,8 +148,8 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 			echo '<table><thead><tr><th class="key-column">'.__( 'Key', 'jsm-show-user-meta' ).'</th>'."\n";
 			echo '<th class="value-column">'.__( 'Value', 'jsm-show-user-meta' ).'</th></tr></thead><tbody>'."\n";
 	
-			ksort( $user_meta );
-			foreach( $user_meta as $meta_key => $arr ) {
+			ksort( $user_meta_filtered );
+			foreach( $user_meta_filtered as $meta_key => $arr ) {
 				foreach ( $skip_keys as $preg_dns )
 					if ( preg_match( $preg_dns, $meta_key ) )
 						continue 2;
@@ -155,7 +157,10 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 				foreach ( $arr as $num => $el )
 					$arr[$num] = maybe_unserialize( $el );
 	
-				echo '<tr><td class="key-column"><div class="key-cell"><pre>'.
+				$is_added = isset( $post_meta[$meta_key] ) ? false : true;
+
+				echo $is_added ? '<tr class="added-meta">' : '<tr>';
+				echo '<td class="key-column"><div class="key-cell"><pre>'.
 					esc_html( $meta_key ).'</pre></div></td>';
 				echo '<td class="value-column"><div class="value-cell"><pre>'.
 					esc_html( var_export( $arr, true ) ).'</pre></div></td></tr>'."\n";

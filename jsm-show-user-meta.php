@@ -48,12 +48,6 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 	
 		public $view_cap;
 	
-		public static function &get_instance() {
-			if ( ! isset( self::$instance ) )
-				self::$instance = new self;
-			return self::$instance;
-		}
-	
 		private function __construct() {
 			if ( is_admin() ) {
 				load_plugin_textdomain( 'jsm-show-user-meta', false, 'jsm-show-user-meta/languages/' );
@@ -62,6 +56,12 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 				add_action( 'edit_user_profile', array( &$this, 'show_meta_boxes' ), 1000, 1 );
 				add_action( 'show_user_profile', array( &$this, 'show_meta_boxes' ), 1000, 1 );
 			}
+		}
+	
+		public static function &get_instance() {
+			if ( ! isset( self::$instance ) )
+				self::$instance = new self;
+			return self::$instance;
 		}
 	
 		public static function check_wp_version() {

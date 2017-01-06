@@ -13,28 +13,28 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: jsm-show-user-meta.php:76
+#: jsm-show-user-meta.php:79
 msgid ""
 "%1$s requires WordPress version %2$s or higher and has been deactivated."
 msgstr ""
 
-#: jsm-show-user-meta.php:78
+#: jsm-show-user-meta.php:81
 msgid "Please upgrade WordPress before trying to reactivate the %1$s plugin."
 msgstr ""
 
-#: jsm-show-user-meta.php:96
+#: jsm-show-user-meta.php:99
 msgid "User Meta"
 msgstr ""
 
-#: jsm-show-user-meta.php:99
+#: jsm-show-user-meta.php:102
 msgid "Show User Meta"
 msgstr ""
 
-#: jsm-show-user-meta.php:148
+#: jsm-show-user-meta.php:151
 msgid "Key"
 msgstr ""
 
-#: jsm-show-user-meta.php:149
+#: jsm-show-user-meta.php:152
 msgid "Value"
 msgstr ""
 

@@ -90,7 +90,7 @@ See the plugin [Other Notes](https://wordpress.org/plugins/jsm-show-user-meta/ot
 
 = Repositories =
 
-* [GitHub](https://github.com/jsmoriss/jsm-show-user-meta)
+* [GitHub](https://jsmoriss.github.io/jsm-show-user-meta/)
 * [WordPress.org](https://wordpress.org/plugins/jsm-show-user-meta/developers/)
 
 = Version Numbering Scheme =

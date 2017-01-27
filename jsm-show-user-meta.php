@@ -11,7 +11,7 @@
  * License URI: http://www.gnu.org/licenses/gpl.txt
  * Description: Show all user meta (aka custom fields) keys and their unserialized values in a metabox on user profile editing pages.
  * Requires At Least: 3.7
- * Tested Up To: 4.7.1
+ * Tested Up To: 4.7.2
  * Version: 1.0.3-1
  *
  * Version Components: {major}.{minor}.{bugfix}-{stage}{level}

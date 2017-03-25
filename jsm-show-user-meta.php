@@ -12,7 +12,7 @@
  * Description: Show all user meta (aka custom fields) keys and their unserialized values in a metabox on user profile editing pages.
  * Requires At Least: 3.7
  * Tested Up To: 4.7.3
- * Version: 1.0.3-1
+ * Version: 1.0.4-1
  *
  * Version Components: {major}.{minor}.{bugfix}-{stage}{level}
  *

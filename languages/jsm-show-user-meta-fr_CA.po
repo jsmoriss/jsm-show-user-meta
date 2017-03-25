@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: JSM's Show User Meta 1.0.3-1\n"
+"Project-Id-Version: JSM's Show User Meta 1.0.4-1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/jsm-show-user-meta\n"
-"POT-Creation-Date: 2016-12-24 08:35+1100\n"
-"PO-Revision-Date: 2016-12-28 04:04+1100\n"
+"POT-Creation-Date: 2017-03-25 10:49+0200\n"
+"PO-Revision-Date: 2017-03-25 10:49+0200\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -14,27 +14,27 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: jsm-show-user-meta.php:76
-msgid "%1$s requires WordPress version %2$s or higher and has been deactivated."
-msgstr "%1$s nécessite WordPress version %2$s ou supérieure et a été désactivé."
+#: jsm-show-user-meta.php:82
+msgid "%1$s requires %2$s version %3$s or higher and has been deactivated."
+msgstr "%1$s nécessite %2$s version %3$s ou supérieure et a été désactivé."
 
-#: jsm-show-user-meta.php:78
-msgid "Please upgrade WordPress before trying to reactivate the %1$s plugin."
-msgstr "Veuillez mettre à jour WordPress avant d'essayer de réactiver l'extension %1$s."
+#: jsm-show-user-meta.php:84
+msgid "Please upgrade %1$s before trying to reactivate the %2$s plugin."
+msgstr "Veuillez mettre à jour %1$s avant d'essayer de réactiver l'extension %2$s."
 
-#: jsm-show-user-meta.php:96
+#: jsm-show-user-meta.php:102
 msgid "User Meta"
 msgstr "Méta d'utilisateur"
 
-#: jsm-show-user-meta.php:99
+#: jsm-show-user-meta.php:105
 msgid "Show User Meta"
 msgstr "Show User Meta"
 
-#: jsm-show-user-meta.php:146
+#: jsm-show-user-meta.php:154
 msgid "Key"
 msgstr "Clé"
 
-#: jsm-show-user-meta.php:147
+#: jsm-show-user-meta.php:155
 msgid "Value"
 msgstr "Valeur"
 

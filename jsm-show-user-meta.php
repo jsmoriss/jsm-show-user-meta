@@ -81,7 +81,7 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 					wp_die( 
 						'<p>'.sprintf( __( '%1$s requires %2$s version %3$s or higher and has been deactivated.',
 							'jsm-show-user-meta' ), $plugin_data['Name'], 'WordPress', self::$wp_min_version ).'</p>'.
-						'<p>'.sprintf( __( 'Please upgrade %1$s before trying to reactivate the %2$s plugin.',
+						'<p>'.sprintf( __( 'Please upgrade %1$s before trying to re-activate the %2$s plugin.',
 							'jsm-show-user-meta' ), 'WordPress', $plugin_data['Name'] ).'</p>'
 					);
 				}

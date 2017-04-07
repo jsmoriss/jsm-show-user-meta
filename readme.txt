@@ -92,7 +92,7 @@ See the plugin [Other Notes](https://wordpress.org/plugins/jsm-show-user-meta/ot
 * [GitHub](https://jsmoriss.github.io/jsm-show-user-meta/)
 * [WordPress.org](https://wordpress.org/plugins/jsm-show-user-meta/developers/)
 
-= Version Numbering Scheme =
+= Version Numbering =
 
 Version components: `{major}.{minor}.{bugfix}-{stage}{level}`
 

@@ -10,7 +10,7 @@ Tags: meta, user meta, custom fields, debug, tools
 Contributors: jsmoriss
 Requires At Least: 3.7
 Tested Up To: 4.7.3
-Stable Tag: 1.0.4-1
+Stable Tag: 1.0.5
 
 Show all user meta (aka custom fields) keys and their unserialized values in a metabox on user profile editing pages.
 

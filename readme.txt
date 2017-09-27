@@ -29,7 +29,7 @@ Show all user meta (aka custom fields) keys and their unserialized values in a m
 <p>There are no plugin settings &mdash; simply install and activate the plugin.</p>
 </blockquote>
 
-= Developers =
+= Power-users / Developers =
 
 See the plugin [Other Notes](https://wordpress.org/plugins/jsm-show-user-meta/other_notes/) page for information on available filters.
 

@@ -1,4 +1,4 @@
-=== JSM's Show User Meta on User Editing Pages ===
+=== JSM's Show User Meta in a Metabox on User Editing Pages ===
 Plugin Name: JSM's Show User Meta
 Plugin Slug: jsm-show-user-meta
 Text Domain: jsm-show-user-meta
@@ -6,7 +6,7 @@ Domain Path: /languages
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://jsmoriss.github.io/jsm-show-user-meta/assets/
-Tags: meta, user meta, custom fields, debug, tools
+Tags: meta, user meta, inspector, custom fields, debug, tools
 Contributors: jsmoriss
 Requires At Least: 3.7
 Tested Up To: 4.8.2

@@ -1,4 +1,4 @@
-=== JSM's Show User Meta in a Metabox on User Editing Pages ===
+=== JSM's Show User Meta in a Metabox on User Editing Pages (Great Plugin for Developers) ===
 Plugin Name: JSM's Show User Meta
 Plugin Slug: jsm-show-user-meta
 Text Domain: jsm-show-user-meta

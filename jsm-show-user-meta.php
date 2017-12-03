@@ -169,4 +169,3 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 	JSM_Show_User_Meta::get_instance();
 }
 
-?>

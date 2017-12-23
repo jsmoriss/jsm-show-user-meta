@@ -1,5 +1,5 @@
 <?php
-/*
+/**
  * Plugin Name: JSM's Show User Meta
  * Text Domain: jsm-show-user-meta
  * Domain Path: /languages

@@ -66,15 +66,15 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 				$plugin = plugin_basename( __FILE__ );
 				if ( is_plugin_active( $plugin ) ) {
 					if ( ! function_exists( 'deactivate_plugins' ) ) {
-						require_once trailingslashit( ABSPATH ).'wp-admin/includes/plugin.php';
+						require_once trailingslashit( ABSPATH ) . 'wp-admin/includes/plugin.php';
 					}
 					$plugin_data = get_plugin_data( __FILE__, false );	// $markup = false
 					deactivate_plugins( $plugin, true );	// $silent = true
 					wp_die( 
-						'<p>'.sprintf( __( '%1$s requires %2$s version %3$s or higher and has been deactivated.',
-							'jsm-show-user-meta' ), $plugin_data['Name'], 'WordPress', $wp_min_version ).'</p>'.
-						'<p>'.sprintf( __( 'Please upgrade %1$s before trying to re-activate the %2$s plugin.',
-							'jsm-show-user-meta' ), 'WordPress', $plugin_data['Name'] ).'</p>'
+						'<p>' . sprintf( __( '%1$s requires %2$s version %3$s or higher and has been deactivated.',
+							'jsm-show-user-meta' ), $plugin_data['Name'], 'WordPress', $wp_min_version ) . '</p>' . 
+						'<p>' . sprintf( __( 'Please upgrade %1$s before trying to re-activate the %2$s plugin.',
+							'jsm-show-user-meta' ), 'WordPress', $plugin_data['Name'] ) . '</p>'
 					);
 				}
 			}
@@ -94,7 +94,7 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 			add_meta_box( 'jsm-sum', __( 'User Meta', 'jsm-show-user-meta' ),
 				array( &$this, 'show_user_meta' ), 'jsm-sum-user', 'normal', 'low' );
 	
-			echo '<h3 id="jsm-sum-metaboxes">'.__( 'Show User Meta', 'jsm-show-user-meta' ).'</h3>';
+			echo '<h3 id="jsm-sum-metaboxes">' . __( 'Show User Meta', 'jsm-show-user-meta' ) . '</h3>';
 			echo '<div id="poststuff">';
 			do_meta_boxes( 'jsm-sum-user', 'normal', $user_obj );
 			echo '</div><!-- .poststuff -->';
@@ -143,26 +143,30 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 			</style>
 			<?php
 	
-			echo '<table><thead><tr><th class="key-column">'.__( 'Key', 'jsm-show-user-meta' ).'</th>'."\n";
-			echo '<th class="value-column">'.__( 'Value', 'jsm-show-user-meta' ).'</th></tr></thead><tbody>'."\n";
+			echo '<table><thead><tr><th class="key-column">' . __( 'Key', 'jsm-show-user-meta' ) . '</th>' . "\n";
+			echo '<th class="value-column">' . __( 'Value', 'jsm-show-user-meta' ) . '</th></tr></thead><tbody>' . "\n";
 	
 			ksort( $user_meta_filtered );
+
 			foreach( $user_meta_filtered as $meta_key => $arr ) {
-				foreach ( $skip_keys as $preg_dns )
-					if ( preg_match( $preg_dns, $meta_key ) )
+
+				foreach ( $skip_keys as $preg_dns ) {
+					if ( preg_match( $preg_dns, $meta_key ) ) {
 						continue 2;
+					}
+				}
 	
-				foreach ( $arr as $num => $el )
+				foreach ( $arr as $num => $el ) {
 					$arr[$num] = maybe_unserialize( $el );
+				}
 	
 				$is_added = isset( $post_meta[$meta_key] ) ? false : true;
 
 				echo $is_added ? '<tr class="added-meta">' : '<tr>';
-				echo '<td class="key-column"><div class="key-cell"><pre>'.
-					esc_html( $meta_key ).'</pre></div></td>';
-				echo '<td class="value-column"><div class="value-cell"><pre>'.
-					esc_html( var_export( $arr, true ) ).'</pre></div></td></tr>'."\n";
+				echo '<td class="key-column"><div class="key-cell"><pre>' . esc_html( $meta_key ) . '</pre></div></td>';
+				echo '<td class="value-column"><div class="value-cell"><pre>' . esc_html( var_export( $arr, true ) ) . '</pre></div></td></tr>' . "\n";
 			}
+
 			echo '</tbody></table>';
 		}
 	}

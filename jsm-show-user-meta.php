@@ -80,15 +80,18 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 		}
 
 		public function show_meta_boxes( $user_obj ) {
-			if ( ! isset( $user_obj->ID ) )	// just in case
+
+			if ( ! isset( $user_obj->ID ) ) {	// just in case
 				return;
+			}
 	
 			$this->view_cap = apply_filters( 'jsm_sum_view_cap', 'manage_options' );
 			$screen = get_current_screen();
 	
 			if ( ! current_user_can( $this->view_cap, $user_obj->ID ) || 
-				! apply_filters( 'jsm_sum_screen_base', true, $screen->base ) )
-					return;
+				! apply_filters( 'jsm_sum_screen_base', true, $screen->base ) ) {
+				return;
+			}
 	
 			add_meta_box( 'jsm-sum', __( 'User Meta', 'jsm-show-user-meta' ),
 				array( &$this, 'show_user_meta' ), 'jsm-sum-user', 'normal', 'low' );
@@ -100,8 +103,10 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 		}
 	
 		public function show_user_meta( $user_obj ) {
-			if ( empty( $user_obj->ID ) )
+
+			if ( empty( $user_obj->ID ) ) {
 				return;
+			}
 	
 			$user_meta = get_user_meta( $user_obj->ID );	// since wp v3.0
 			$user_meta_filtered = apply_filters( 'jsm_sum_user_meta', $user_meta, $user_obj );

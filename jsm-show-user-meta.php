@@ -59,7 +59,7 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 
 		public static function check_wp_version() {
 			global $wp_version;
-			$wp_min_version = 3.7;
+			$wp_min_version = 3.8;
 
 			if ( version_compare( $wp_version, $wp_min_version, '<' ) ) {
 				$plugin = plugin_basename( __FILE__ );
@@ -177,4 +177,3 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 
 	JSM_Show_User_Meta::get_instance();
 }
-

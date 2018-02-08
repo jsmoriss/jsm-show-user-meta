@@ -81,7 +81,7 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 
 		public function show_meta_boxes( $user_obj ) {
 
-			if ( ! isset( $user_obj->ID ) ) {	// just in case
+			if ( ! isset( $user_obj->ID ) ) {	// Just in case.
 				return;
 			}
 	

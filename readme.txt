@@ -111,12 +111,11 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * *Bugfixes*
 	* None
 * *Developer Notes*
-	* Maintenance release - update to version numbering scheme.
-	* Dropped the package number from the production version string.
+	* Maintenance release.
 
 == Upgrade Notice ==
 
 = 1.0.5 =
 
-(2017/04/08) Maintenance release - update to version numbering scheme.
+(2017/04/08) Maintenance release.
 

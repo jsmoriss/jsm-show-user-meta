@@ -88,8 +88,7 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 			$this->view_cap = apply_filters( 'jsm_sum_view_cap', 'manage_options' );
 			$screen = get_current_screen();
 	
-			if ( ! current_user_can( $this->view_cap, $user_obj->ID ) || 
-				! apply_filters( 'jsm_sum_screen_base', true, $screen->base ) ) {
+			if ( ! current_user_can( $this->view_cap, $user_obj->ID ) || ! apply_filters( 'jsm_sum_screen_base', true, $screen->base ) ) {
 				return;
 			}
 	

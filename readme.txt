@@ -1,4 +1,4 @@
-=== JSM's Show User Meta in a Metabox on User Editing Pages (Great Plugin for Developers) ===
+=== JSM's Show User Meta ===
 Plugin Name: JSM's Show User Meta
 Plugin Slug: jsm-show-user-meta
 Text Domain: jsm-show-user-meta
@@ -13,17 +13,17 @@ Requires At Least: 3.8
 Tested Up To: 4.9.4
 Stable Tag: 1.0.5
 
-Show all user meta (aka custom fields) keys and their unserialized values in a metabox on user profile editing pages.
+Show all user meta in a metabox on user editing pages -- great plugin for developers or debugging issues with user meta.
 
 == Description ==
 
-<strong>Wondering about the user meta your theme and/or plugins might be creating?</strong>
+Wondering about the user meta your theme and/or plugins might be creating?
 
-<strong>Want to find the name of a specific user meta key?</strong>
+Want to find the name of a specific user meta key?
 
-<strong>Need some help debugging your user meta?</strong>
+Need some help debugging your user meta?
 
-The JSM's Show User Meta plugin displays all user meta (aka custom fields) keys and their unserialized values in a metabox at the bottom of user profile editing pages.
+The JSM's Show User Meta plugin displays all user meta keys and their unserialized values in a metabox at the bottom of user profile editing pages.
 
 There are no plugin settings &mdash; simply install and activate the plugin.
 

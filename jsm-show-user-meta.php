@@ -96,7 +96,9 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 	
 			echo '<h3 id="jsm-sum-metaboxes">' . __( 'Show User Meta', 'jsm-show-user-meta' ) . '</h3>';
 			echo '<div id="poststuff">';
+
 			do_meta_boxes( 'jsm-sum-user', 'normal', $user_obj );
+
 			echo '</div><!-- .poststuff -->';
 		}
 	

@@ -34,7 +34,7 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 	class JSM_Show_User_Meta {
 
 		private static $instance;
-		private static $wp_min_version = 3.8;
+		private static $wp_min_version = '3.8';
 	
 		public $view_cap;
 	

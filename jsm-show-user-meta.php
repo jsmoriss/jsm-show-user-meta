@@ -48,9 +48,11 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 		}
 	
 		public static function &get_instance() {
+
 			if ( ! isset( self::$instance ) ) {
 				self::$instance = new self;
 			}
+
 			return self::$instance;
 		}
 	

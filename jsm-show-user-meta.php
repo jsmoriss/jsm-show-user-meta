@@ -42,8 +42,8 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 			if ( is_admin() ) {
 				add_action( 'plugins_loaded', array( __CLASS__, 'load_textdomain' ) );
 				add_action( 'admin_init', array( __CLASS__, 'check_wp_version' ) );	// Requires WP v3.8 or better.
-				add_action( 'edit_user_profile', array( &$this, 'show_meta_boxes' ), 1000, 1 );
-				add_action( 'show_user_profile', array( &$this, 'show_meta_boxes' ), 1000, 1 );
+				add_action( 'edit_user_profile', array( $this, 'show_meta_boxes' ), 1000, 1 );
+				add_action( 'show_user_profile', array( $this, 'show_meta_boxes' ), 1000, 1 );
 			}
 		}
 	
@@ -94,7 +94,7 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 			}
 	
 			add_meta_box( 'jsm-sum', __( 'User Meta', 'jsm-show-user-meta' ),
-				array( &$this, 'show_user_meta' ), 'jsm-sum-user', 'normal', 'low' );
+				array( $this, 'show_user_meta' ), 'jsm-sum-user', 'normal', 'low' );
 	
 			echo '<h3 id="jsm-sum-metaboxes">' . __( 'Show User Meta', 'jsm-show-user-meta' ) . '</h3>';
 			echo '<div id="poststuff">';

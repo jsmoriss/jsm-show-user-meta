@@ -23,10 +23,6 @@
 
 <p>There are no plugin settings &mdash; simply install and activate the plugin.</p>
 
-<h4>Power-users / Developers</h4>
-
-<p>See the plugin <a href="https://wordpress.org/plugins/jsm-show-user-meta/other_notes/">Other Notes</a> page for information on available filters.</p>
-
 <h4>Related Plugins</h4>
 
 <ul>
@@ -66,25 +62,6 @@
 
 <h2>Frequently Asked Questions</h2>
 
-<h3 class="top">Frequently Asked Questions</h3>
-
-<ul>
-<li>None</li>
-</ul>
 
 
-<h2>Other Notes</h2>
-
-<h3>Other Notes</h3>
-<h3 class="top">Additional Documentation</h3>
-
-<p><strong>Developer Filters</strong></p>
-
-<p><em>'jsm_sum_view_cap' ( 'manage_options' )</em> &mdash; The current user must have these capabilities to view the "User Meta" metabox (default: 'manage_options' ).</p></p>
-
-<p><em>'jsm_sum_screen_base' ( true, $screen_base )</em> &mdash; Add the "User Meta" metabox to the editing page for user screen base (example: 'user-edit', 'profile').</p></p>
-
-<p><em>'jsm_sum_user_meta' ( $user_meta, $user_obj )</em> &mdash; The user meta array (unserialized) retrieved for display in the metabox.</p></p>
-
-<p><em>'jsm_sum_skip_keys' ( $array )</em> &mdash; An array of key name regular expressions to ignore (default: '/^closedpostboxes_/', '/columnhidden$/', '/^meta-box-order_/', '/^metaboxhidden_/', and '/^screen_layout_/' ).</p></p>
 

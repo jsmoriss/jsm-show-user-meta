@@ -27,10 +27,6 @@ The JSM's Show User Meta plugin displays all user meta keys and their unserializ
 
 There are no plugin settings &mdash; simply install and activate the plugin.
 
-= Power-users / Developers =
-
-See the plugin [Other Notes](https://wordpress.org/plugins/jsm-show-user-meta/other_notes/) page for information on available filters.
-
 = Related Plugins =
 
 * [JSM's Show Post Meta](https://wordpress.org/plugins/jsm-show-post-meta/)
@@ -61,24 +57,6 @@ See the plugin [Other Notes](https://wordpress.org/plugins/jsm-show-user-meta/ot
 1. Click the *Activate Plugin* link.
 
 == Frequently Asked Questions ==
-
-<h3 class="top">Frequently Asked Questions</h3>
-
-* None
-
-== Other Notes ==
-
-<h3 class="top">Additional Documentation</h3>
-
-**Developer Filters**
-
-*'jsm_sum_view_cap' ( 'manage_options' )* &mdash; The current user must have these capabilities to view the "User Meta" metabox (default: 'manage_options' ).</p>
-
-*'jsm_sum_screen_base' ( true, $screen_base )* &mdash; Add the "User Meta" metabox to the editing page for user screen base (example: 'user-edit', 'profile').</p>
-
-*'jsm_sum_user_meta' ( $user_meta, $user_obj )* &mdash; The user meta array (unserialized) retrieved for display in the metabox.</p>
-
-*'jsm_sum_skip_keys' ( $array )* &mdash; An array of key name regular expressions to ignore (default: '/^closedpostboxes_/', '/columnhidden$/', '/^meta-box-order_/', '/^metaboxhidden_/', and '/^screen_layout_/' ).</p>
 
 == Screenshots ==
 

@@ -21,7 +21,7 @@
 
 <p>The JSM's Show User Meta plugin displays all user meta keys and their unserialized values in a metabox at the bottom of user profile editing pages.</p>
 
-<p>There are no plugin settings &mdash; simply install and activate the plugin.</p>
+<p>There are no plugin settings &mdash; simply <em>install</em> and <em>activate</em> the plugin.</p>
 
 <h4>Related Plugins</h4>
 

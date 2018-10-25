@@ -92,9 +92,19 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 			if ( ! current_user_can( $this->view_cap, $user_obj->ID ) || ! apply_filters( 'jsm_sum_screen_base', true, $screen->base ) ) {
 				return;
 			}
-	
-			add_meta_box( 'jsm-sum', __( 'User Meta', 'jsm-show-user-meta' ),
-				array( $this, 'show_user_meta' ), 'jsm-sum-user', 'normal', 'low' );
+
+			$metabox_id      = 'jsm-sum';
+			$metabox_title   = __( 'User Meta', 'jsm-show-user-meta' );
+			$metabox_screen  = 'jsm-sum-user';
+			$metabox_context = 'normal';
+			$metabox_prio    = 'low';
+			$callback_args   = array(	// The SECOND argument passed to the callback.
+				'__block_editor_compatible_meta_box' => true,
+			);
+
+			add_meta_box( $metabox_id, $metabox_title,
+				array( $this, 'show_user_meta' ), $metabox_screen,
+					$metabox_context, $metabox_prio, $callback_args );
 	
 			echo '<h3 id="jsm-sum-metaboxes">' . __( 'Show User Meta', 'jsm-show-user-meta' ) . '</h3>';
 			echo '<div id="poststuff">';

@@ -86,8 +86,9 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 				return;
 			}
 	
-			$this->view_cap = apply_filters( 'jsm_sum_view_cap', 'manage_options' );
 			$screen = get_current_screen();
+
+			$this->view_cap = apply_filters( 'jsm_sum_view_cap', 'manage_options' );
 	
 			if ( ! current_user_can( $this->view_cap, $user_obj->ID ) || ! apply_filters( 'jsm_sum_screen_base', true, $screen->base ) ) {
 				return;
@@ -98,7 +99,7 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 			$metabox_screen  = 'jsm-sum-user';
 			$metabox_context = 'normal';
 			$metabox_prio    = 'low';
-			$callback_args   = array(	// The SECOND argument passed to the callback.
+			$callback_args   = array(	// Second argument passed to the callback function / method.
 				'__block_editor_compatible_meta_box' => true,
 			);
 

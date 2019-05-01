@@ -182,10 +182,10 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 				}
 	
 				foreach ( $arr as $num => $el ) {
-					$arr[$num] = maybe_unserialize( $el );
+					$arr[ $num ] = maybe_unserialize( $el );
 				}
 	
-				$is_added = isset( $post_meta[$meta_key] ) ? false : true;
+				$is_added = isset( $post_meta[ $meta_key ] ) ? false : true;
 
 				echo $is_added ? '<tr class="added-meta">' : '<tr>';
 				echo '<td class="key-column"><div class="key-cell"><pre>' . esc_html( $meta_key ) . '</pre></div></td>';

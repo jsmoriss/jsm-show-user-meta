@@ -11,7 +11,7 @@
  * License URI: http://www.gnu.org/licenses/gpl.txt
  * Description: Show all user meta (aka custom fields) keys and their unserialized values in a metabox on user profile editing pages.
  * Requires PHP: 5.6
- * Requires At Least: 3.8
+ * Requires At Least: 3.9
  * Tested Up To: 5.2.2
  * Version: 1.0.5
  *
@@ -34,14 +34,14 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 	class JSM_Show_User_Meta {
 
 		private static $instance;
-		private static $wp_min_version = '3.8';
+		private static $wp_min_version = '3.9';
 	
 		public $view_cap;
 	
 		private function __construct() {
 			if ( is_admin() ) {
 				add_action( 'plugins_loaded', array( __CLASS__, 'load_textdomain' ) );
-				add_action( 'admin_init', array( __CLASS__, 'check_wp_version' ) );	// Requires WP v3.8 or better.
+				add_action( 'admin_init', array( __CLASS__, 'check_wp_version' ) );	// Requires WP v3.9 or better.
 				add_action( 'edit_user_profile', array( $this, 'show_meta_boxes' ), 1000, 1 );
 				add_action( 'show_user_profile', array( $this, 'show_meta_boxes' ), 1000, 1 );
 			}

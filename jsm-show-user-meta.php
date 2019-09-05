@@ -12,7 +12,7 @@
  * Description: Show all user meta (aka custom fields) keys and their unserialized values in a metabox on user profile editing pages.
  * Requires PHP: 5.6
  * Requires At Least: 3.9
- * Tested Up To: 5.2.2
+ * Tested Up To: 5.2.3
  * Version: 1.0.5
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
@@ -74,9 +74,9 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 						require_once trailingslashit( ABSPATH ) . 'wp-admin/includes/plugin.php';
 					}
 
-					$plugin_data = get_plugin_data( __FILE__, false ); // $markup is false
+					$plugin_data = get_plugin_data( __FILE__, $markup = false );
 
-					deactivate_plugins( $plugin, true ); // $silent is true
+					deactivate_plugins( $plugin, $silent = true );
 
 					wp_die( 
 						'<p>' . sprintf( __( '%1$s requires %2$s version %3$s or higher and has been deactivated.',

@@ -39,9 +39,11 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 		public $view_cap;
 	
 		private function __construct() {
+
 			if ( is_admin() ) {
+
 				add_action( 'plugins_loaded', array( __CLASS__, 'load_textdomain' ) );
-				add_action( 'admin_init', array( __CLASS__, 'check_wp_version' ) );	// Requires WP v3.9 or better.
+				add_action( 'admin_init', array( __CLASS__, 'check_wp_version' ) );
 				add_action( 'edit_user_profile', array( $this, 'show_meta_boxes' ), 1000, 1 );
 				add_action( 'show_user_profile', array( $this, 'show_meta_boxes' ), 1000, 1 );
 			}

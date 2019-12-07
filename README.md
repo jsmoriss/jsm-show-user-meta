@@ -27,7 +27,7 @@
 
 <ul>
 <li><a href="https://wordpress.org/plugins/jsm-show-post-meta/">JSM's Show Post Meta</a></li>
-<li><a href="https://wordpress.org/plugins/jsm-show-term-meta/">JSM's Show Term Meta</a> (requires WordPress v4.4 or better)</li>
+<li><a href="https://wordpress.org/plugins/jsm-show-term-meta/">JSM's Show Term Meta</a> (requires WordPress v4.4 or newer)</li>
 </ul>
 
 

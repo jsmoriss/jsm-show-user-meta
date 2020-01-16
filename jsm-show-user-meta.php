@@ -114,7 +114,7 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 			);
 
 			add_meta_box( $metabox_id, $metabox_title,
-				array( $this, 'show_user_meta' ), $metabox_screen,
+				array( $this, 'show_user_metadata' ), $metabox_screen,
 					$metabox_context, $metabox_prio, $callback_args );
 	
 			echo '<h3 id="jsm-sum-metaboxes">' . __( 'Show User Metadata', 'jsm-show-user-meta' ) . '</h3>';
@@ -125,7 +125,7 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 			echo '</div><!-- .poststuff -->';
 		}
 	
-		public function show_user_meta( $user_obj ) {
+		public function show_user_metadata( $user_obj ) {
 
 			if ( empty( $user_obj->ID ) ) {
 				return;

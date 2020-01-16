@@ -13,7 +13,7 @@
  * Requires PHP: 5.5
  * Requires At Least: 4.0
  * Tested Up To: 5.3.2
- * Version: 1.0.5
+ * Version: 1.1.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *

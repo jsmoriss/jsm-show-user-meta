@@ -1,8 +1,8 @@
-# Copyright (C) 2020 JSM's Show User Meta
-# This file is distributed under the same license as the JSM's Show User Meta package.
+# Copyright (C) 2020 JSM's Show User Metadata
+# This file is distributed under the same license as the JSM's Show User Metadata package.
 msgid ""
 msgstr ""
-"Project-Id-Version: JSM's Show User Meta 1.0.5\n"
+"Project-Id-Version: JSM's Show User Metadata 1.0.5\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/jsm-show-user-"
 "meta\n"
 "POT-Creation-Date: 2020-MO-DA HO:MI+ZONE\n"
@@ -22,11 +22,11 @@ msgid "Please upgrade %1$s before trying to re-activate the %2$s plugin."
 msgstr ""
 
 #: jsm-show-user-meta.php:108
-msgid "User Meta"
+msgid "User Metadata"
 msgstr ""
 
 #: jsm-show-user-meta.php:120
-msgid "Show User Meta"
+msgid "Show User Metadata"
 msgstr ""
 
 #: jsm-show-user-meta.php:173
@@ -38,7 +38,7 @@ msgid "Value"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-msgid "JSM's Show User Meta"
+msgid "JSM's Show User Metadata"
 msgstr ""
 
 #. Plugin URI of the plugin/theme

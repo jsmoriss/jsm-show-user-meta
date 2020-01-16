@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: JSM's Show User Meta
+ * Plugin Name: JSM's Show User Metadata
  * Text Domain: jsm-show-user-meta
  * Domain Path: /languages
  * Plugin URI: https://surniaulula.com/extend/plugins/jsm-show-user-meta/
@@ -29,9 +29,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
-if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
+if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 
-	class JSM_Show_User_Meta {
+	class JSM_Show_User_Metadata {
 
 		private static $instance;
 		private static $wp_min_version = '4.0';
@@ -105,7 +105,7 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 			}
 
 			$metabox_id      = 'jsm-sum';
-			$metabox_title   = __( 'User Meta', 'jsm-show-user-meta' );
+			$metabox_title   = __( 'User Metadata', 'jsm-show-user-meta' );
 			$metabox_screen  = 'jsm-sum-user';
 			$metabox_context = 'normal';
 			$metabox_prio    = 'low';
@@ -117,7 +117,7 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 				array( $this, 'show_user_meta' ), $metabox_screen,
 					$metabox_context, $metabox_prio, $callback_args );
 	
-			echo '<h3 id="jsm-sum-metaboxes">' . __( 'Show User Meta', 'jsm-show-user-meta' ) . '</h3>';
+			echo '<h3 id="jsm-sum-metaboxes">' . __( 'Show User Metadata', 'jsm-show-user-meta' ) . '</h3>';
 			echo '<div id="poststuff">';
 
 			do_meta_boxes( 'jsm-sum-user', 'normal', $user_obj );
@@ -198,5 +198,5 @@ if ( ! class_exists( 'JSM_Show_User_Meta' ) ) {
 		}
 	}
 
-	JSM_Show_User_Meta::get_instance();
+	JSM_Show_User_Metadata::get_instance();
 }

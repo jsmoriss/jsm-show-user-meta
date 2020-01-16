@@ -1,9 +1,9 @@
-<h1>JSM&#039;s Show User Meta</h1>
+<h1>JSM&#039;s Show User Metadata</h1>
 
 <table>
-<tr><th align="right" valign="top" nowrap>Plugin Name</th><td>JSM&#039;s Show User Meta</td></tr>
+<tr><th align="right" valign="top" nowrap>Plugin Name</th><td>JSM&#039;s Show User Metadata</td></tr>
 <tr><th align="right" valign="top" nowrap>Summary</th><td>Show all user meta in a metabox on user editing pages -- great plugin for developers or debugging issues with user meta.</td></tr>
-<tr><th align="right" valign="top" nowrap>Stable Version</th><td>1.0.5</td></tr>
+<tr><th align="right" valign="top" nowrap>Stable Version</th><td>1.1.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires PHP</th><td>5.5 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires WordPress</th><td>4.0 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Tested Up To WordPress</th><td>5.3.2</td></tr>
@@ -20,15 +20,15 @@
 
 <p>Need some help debugging your user meta?</p>
 
-<p>The JSM's Show User Meta plugin displays all user meta keys and their unserialized values in a metabox at the bottom of user profile editing pages.</p>
+<p>The JSM's Show User Metadata plugin displays all user meta keys and their unserialized values in a metabox at the bottom of user profile editing pages.</p>
 
 <p>There are no plugin settings &mdash; simply <em>install</em> and <em>activate</em> the plugin.</p>
 
 <h4>Related Plugins</h4>
 
 <ul>
-<li><a href="https://wordpress.org/plugins/jsm-show-post-meta/">JSM's Show Post Meta</a></li>
-<li><a href="https://wordpress.org/plugins/jsm-show-term-meta/">JSM's Show Term Meta</a> (requires WordPress v4.4 or newer)</li>
+<li><a href="https://wordpress.org/plugins/jsm-show-post-meta/">JSM's Show Post Metadata</a></li>
+<li><a href="https://wordpress.org/plugins/jsm-show-term-meta/">JSM's Show Term Metadata</a> (requires WordPress v4.4 or newer)</li>
 </ul>
 
 

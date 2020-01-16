@@ -1,5 +1,5 @@
-=== JSM's Show User Meta ===
-Plugin Name: JSM's Show User Meta
+=== JSM's Show User Metadata ===
+Plugin Name: JSM's Show User Metadata
 Plugin Slug: jsm-show-user-meta
 Text Domain: jsm-show-user-meta
 Domain Path: /languages
@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 5.5
 Requires At Least: 4.0
 Tested Up To: 5.3.2
-Stable Tag: 1.0.5
+Stable Tag: 1.1.0
 
 Show all user meta in a metabox on user editing pages -- great plugin for developers or debugging issues with user meta.
 
@@ -23,14 +23,14 @@ Want to find the name of a specific user meta key?
 
 Need some help debugging your user meta?
 
-The JSM's Show User Meta plugin displays all user meta keys and their unserialized values in a metabox at the bottom of user profile editing pages.
+The JSM's Show User Metadata plugin displays all user meta keys and their unserialized values in a metabox at the bottom of user profile editing pages.
 
 There are no plugin settings &mdash; simply *install* and *activate* the plugin.
 
 = Related Plugins =
 
-* [JSM's Show Post Meta](https://wordpress.org/plugins/jsm-show-post-meta/)
-* [JSM's Show Term Meta](https://wordpress.org/plugins/jsm-show-term-meta/) (requires WordPress v4.4 or newer)
+* [JSM's Show Post Metadata](https://wordpress.org/plugins/jsm-show-post-meta/)
+* [JSM's Show Term Metadata](https://wordpress.org/plugins/jsm-show-term-meta/) (requires WordPress v4.4 or newer)
 
 == Installation ==
 
@@ -60,7 +60,7 @@ There are no plugin settings &mdash; simply *install* and *activate* the plugin.
 
 == Screenshots ==
 
-01. The User Meta metabox added to admin user profile pages.
+01. The User Metadata metabox added to admin user profile pages.
 
 == Changelog ==
 
@@ -80,7 +80,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 1.0.5 (2017/04/08)**
+**Version 1.1.0 (2020/01/16)**
 
 * **New Features**
 	* None.
@@ -93,7 +93,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 1.0.5 =
+= 1.1.0 =
 
-(2017/04/08) Maintenance release.
+(2020/01/16) Maintenance release.
 

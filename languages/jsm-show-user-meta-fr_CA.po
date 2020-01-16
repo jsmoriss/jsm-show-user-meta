@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: JSM's Show User Meta 1.0.5\n"
+"Project-Id-Version: JSM's Show User Meta 1.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/jsm-show-user-meta\n"
-"POT-Creation-Date: 2017-03-31 17:24+0200\n"
-"PO-Revision-Date: 2017-04-08 19:41+0200\n"
+"POT-Creation-Date: 2020-01-16 08:34-0800\n"
+"PO-Revision-Date: 2020-01-16 08:34-0800\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -14,33 +14,33 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: jsm-show-user-meta.php:82
+#: jsm-show-user-meta.php:84
 msgid "%1$s requires %2$s version %3$s or higher and has been deactivated."
 msgstr "%1$s nécessite %2$s version %3$s ou supérieure et a été désactivé."
 
-#: jsm-show-user-meta.php:84
+#: jsm-show-user-meta.php:86
 msgid "Please upgrade %1$s before trying to re-activate the %2$s plugin."
 msgstr "Veuillez mettre à jour %1$s avant d'essayer de réactiver l'extension %2$s."
 
-#: jsm-show-user-meta.php:102
-msgid "User Meta"
-msgstr "Méta d'utilisateur"
+#: jsm-show-user-meta.php:108
+msgid "User Metadata"
+msgstr "Métadata d'utilisateur"
 
-#: jsm-show-user-meta.php:105
-msgid "Show User Meta"
-msgstr "Show User Meta"
+#: jsm-show-user-meta.php:120
+msgid "Show User Metadata"
+msgstr "Show User Metadata"
 
-#: jsm-show-user-meta.php:154
+#: jsm-show-user-meta.php:173
 msgid "Key"
 msgstr "Clé"
 
-#: jsm-show-user-meta.php:155
+#: jsm-show-user-meta.php:174
 msgid "Value"
 msgstr "Valeur"
 
 #. Plugin Name of the plugin/theme
-msgid "JSM's Show User Meta"
-msgstr "JSM's Show User Meta"
+msgid "JSM's Show User Metadata"
+msgstr "JSM's Show User Metadata"
 
 #. Plugin URI of the plugin/theme
 msgid "https://surniaulula.com/extend/plugins/jsm-show-user-meta/"

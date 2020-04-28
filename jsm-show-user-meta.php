@@ -43,12 +43,12 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 
 			if ( is_admin() ) {
 
-				add_action( 'plugins_loaded', array( __CLASS__, 'load_textdomain' ) );
-
 				/**
 				 * Check for the minimum required WordPress version.
 				 */
 				add_action( 'admin_init', array( __CLASS__, 'check_wp_version' ) );
+
+				add_action( 'plugins_loaded', array( __CLASS__, 'load_textdomain' ) );
 
 				add_action( 'edit_user_profile', array( $this, 'show_meta_boxes' ), 1000, 1 );
 
@@ -65,19 +65,18 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 			return self::$instance;
 		}
 	
-		public static function load_textdomain() {
-
-			load_plugin_textdomain( 'jsm-show-user-meta', false, 'jsm-show-user-meta/languages/' );
-		}
-
 		/**
 		 * Check for the minimum required WordPress version.
+		 *
+		 * If we don't have the minimum required version, then de-activate ourselves and die.
 		 */
 		public static function check_wp_version() {
 
 			global $wp_version;
 
 			if ( version_compare( $wp_version, self::$wp_min_version, '<' ) ) {
+
+				self::init_textdomain();	// If not already loaded, load the textdomain now.
 
 				$plugin = plugin_basename( __FILE__ );
 
@@ -94,6 +93,19 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 						sprintf( __( 'Please upgrade %1$s before trying to re-activate the %2$s plugin.',
 							'jsm-show-user-meta' ), 'WordPress', $plugin_data['Name'] ) . '</p>' );
 			}
+		}
+
+		public static function load_textdomain() {
+
+			static $do_once = null;
+
+			if ( null !== $do_once ) {	// Already loaded.
+				return;
+			}
+
+			$do_once = true;
+
+			load_plugin_textdomain( 'jsm-show-user-meta', false, 'jsm-show-user-meta/languages/' );
 		}
 
 		public function show_meta_boxes( $user_obj ) {

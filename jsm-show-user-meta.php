@@ -48,7 +48,7 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 				 */
 				add_action( 'admin_init', array( __CLASS__, 'check_wp_version' ) );
 
-				add_action( 'plugins_loaded', array( __CLASS__, 'load_textdomain' ) );
+				add_action( 'plugins_loaded', array( __CLASS__, 'init_textdomain' ) );
 
 				add_action( 'edit_user_profile', array( $this, 'show_meta_boxes' ), 1000, 1 );
 
@@ -95,15 +95,15 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 			}
 		}
 
-		public static function load_textdomain() {
+		public static function init_textdomain() {
 
-			static $do_once = null;
+			static $loaded = null;
 
-			if ( null !== $do_once ) {	// Already loaded.
+			if ( null !== $loaded ) {
 				return;
 			}
 
-			$do_once = true;
+			$loaded = true;
 
 			load_plugin_textdomain( 'jsm-show-user-meta', false, 'jsm-show-user-meta/languages/' );
 		}

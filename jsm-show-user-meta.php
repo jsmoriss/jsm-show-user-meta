@@ -35,7 +35,7 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 
 		private static $instance = null;
 
-		private static $wp_min_version = '4.0';
+		private static $wp_min_version = '4.2';
 	
 		public $view_cap;
 	
@@ -46,7 +46,7 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 				/**
 				 * Check for the minimum required WordPress version.
 				 */
-				add_action( 'admin_init', array( __CLASS__, 'check_wp_version' ) );
+				add_action( 'admin_init', array( __CLASS__, 'check_wp_min_version' ) );
 
 				add_action( 'plugins_loaded', array( __CLASS__, 'init_textdomain' ) );
 
@@ -70,7 +70,7 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 		 *
 		 * If we don't have the minimum required version, then de-activate ourselves and die.
 		 */
-		public static function check_wp_version() {
+		public static function check_wp_min_version() {
 
 			global $wp_version;
 

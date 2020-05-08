@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the JSM's Show User Metadata package.
 msgid ""
 msgstr ""
-"Project-Id-Version: JSM's Show User Metadata 1.1.0\n"
+"Project-Id-Version: JSM's Show User Metadata 1.2.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/jsm-show-user-"
 "meta\n"
 "POT-Creation-Date: 2020-MO-DA HO:MI+ZONE\n"
@@ -13,28 +13,28 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: jsm-show-user-meta.php:89
+#: jsm-show-user-meta.php:91
 msgid ""
 "The %1$s plugin requires %2$s version %3$s or newer and has been deactivated."
 msgstr ""
 
-#: jsm-show-user-meta.php:92
+#: jsm-show-user-meta.php:94
 msgid "Please upgrade %1$s before trying to re-activate the %2$s plugin."
 msgstr ""
 
-#: jsm-show-user-meta.php:130
+#: jsm-show-user-meta.php:136
 msgid "User Metadata"
 msgstr ""
 
-#: jsm-show-user-meta.php:142
+#: jsm-show-user-meta.php:148
 msgid "Show User Metadata"
 msgstr ""
 
-#: jsm-show-user-meta.php:195
+#: jsm-show-user-meta.php:202
 msgid "Key"
 msgstr ""
 
-#: jsm-show-user-meta.php:196
+#: jsm-show-user-meta.php:204
 msgid "Value"
 msgstr ""
 

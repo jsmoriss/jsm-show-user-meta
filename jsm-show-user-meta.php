@@ -12,7 +12,7 @@
  * Description: Show all user meta (aka custom fields) keys and their unserialized values in a metabox on user profile editing pages.
  * Requires PHP: 5.6
  * Requires At Least: 4.2
- * Tested Up To: 5.4.1
+ * Tested Up To: 5.4.2
  * Version: 1.2.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]

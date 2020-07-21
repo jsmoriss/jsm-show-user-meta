@@ -160,9 +160,11 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 				return;
 			}
 	
-			$user_meta          = get_user_meta( $user_obj->ID );
+			$user_meta = get_user_meta( $user_obj->ID );
+
 			$user_meta_filtered = apply_filters( 'jsm_sum_user_meta', $user_meta, $user_obj );
-			$skip_keys          = apply_filters( 'jsm_sum_skip_keys', array(
+
+			$skip_keys = apply_filters( 'jsm_sum_skip_keys', array(
 				'/^closedpostboxes_/',
 				'/columnshidden$/',
 				'/^meta-box-order_/',

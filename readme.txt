@@ -10,7 +10,7 @@ Tags: meta, user meta, inspector, custom fields, debug, tools
 Contributors: jsmoriss
 Requires PHP: 5.6
 Requires At Least: 4.2
-Tested Up To: 5.4.2
+Tested Up To: 5.5
 Stable Tag: 1.2.0
 
 Show all user meta in a metabox on user editing pages -- great plugin for developers or debugging issues with user meta.

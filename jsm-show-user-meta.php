@@ -36,9 +36,9 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 		private static $instance = null;
 
 		private static $wp_min_version = '4.2';
-	
+
 		public $view_cap;
-	
+
 		private function __construct() {
 
 			if ( is_admin() ) {
@@ -55,7 +55,7 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 				add_action( 'show_user_profile', array( $this, 'show_meta_boxes' ), 1000, 1 );
 			}
 		}
-	
+
 		public static function &get_instance() {
 
 			if ( null === self::$instance ) {
@@ -65,7 +65,7 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 
 			return self::$instance;
 		}
-	
+
 		/**
 		 * Check for the minimum required WordPress version.
 		 *
@@ -121,11 +121,11 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 
 				return;
 			}
-	
+
 			$screen = get_current_screen();
 
 			$this->view_cap = apply_filters( 'jsm_sum_view_cap', 'manage_options' );
-	
+
 			if ( ! current_user_can( $this->view_cap, $user_obj->ID ) ||
 				! apply_filters( 'jsm_sum_screen_base', true, $screen->base ) ) {
 
@@ -144,7 +144,7 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 			add_meta_box( $metabox_id, $metabox_title,
 				array( $this, 'show_user_metadata' ), $metabox_screen,
 					$metabox_context, $metabox_prio, $callback_args );
-	
+
 			echo '<h3 id="jsm-sum-metaboxes">' . __( 'Show User Metadata', 'jsm-show-user-meta' ) . '</h3>';
 
 			echo '<div id="poststuff">';
@@ -153,13 +153,13 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 
 			echo '</div><!-- .poststuff -->';
 		}
-	
+
 		public function show_user_metadata( $user_obj ) {
 
 			if ( empty( $user_obj->ID ) ) {
 				return;
 			}
-	
+
 			$user_meta = get_user_meta( $user_obj->ID );
 
 			$user_meta_filtered = apply_filters( 'jsm_sum_user_meta', $user_meta, $user_obj );
@@ -171,7 +171,7 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 				'/^metaboxhidden_/',
 				'/^screen_layout_/',
 			) );
-	
+
 			?>
 			<style>
 				div#jsm-sum.postbox table { 
@@ -200,11 +200,11 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 				}
 			</style>
 			<?php
-	
+
 			echo '<table><thead><tr><th class="key-column">' . __( 'Key', 'jsm-show-user-meta' ) . '</th>' . "\n";
 
 			echo '<th class="value-column">' . __( 'Value', 'jsm-show-user-meta' ) . '</th></tr></thead><tbody>' . "\n";
-	
+
 			ksort( $user_meta_filtered );
 
 			foreach( $user_meta_filtered as $meta_key => $arr ) {
@@ -216,12 +216,12 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 						continue 2;
 					}
 				}
-	
+
 				foreach ( $arr as $num => $el ) {
 
 					$arr[ $num ] = maybe_unserialize( $el );
 				}
-	
+
 				$is_added = isset( $post_meta[ $meta_key ] ) ? false : true;
 
 				echo $is_added ? '<tr class="added-meta">' : '<tr>';

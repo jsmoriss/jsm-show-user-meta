@@ -11,7 +11,7 @@
  * License URI: http://www.gnu.org/licenses/gpl.txt
  * Description: Show all user meta (aka custom fields) keys and their unserialized values in a metabox on user profile editing pages.
  * Requires PHP: 5.6
- * Requires At Least: 4.2
+ * Requires At Least: 4.4
  * Tested Up To: 5.5.1
  * Version: 1.2.0
  *
@@ -35,7 +35,7 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 
 		private static $instance = null;
 
-		private static $wp_min_version = '4.2';
+		private static $wp_min_version = '4.4';
 
 		public $view_cap;
 

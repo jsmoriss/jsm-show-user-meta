@@ -13,7 +13,7 @@
  * Requires PHP: 5.6
  * Requires At Least: 4.4
  * Tested Up To: 5.5.1
- * Version: 1.2.0
+ * Version: 1.3.0-dev.1
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -48,7 +48,7 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 				 */
 				add_action( 'admin_init', array( __CLASS__, 'check_wp_min_version' ) );
 
-				add_action( 'plugins_loaded', array( __CLASS__, 'init_textdomain' ) );
+				add_action( 'plugins_loaded', array( $this, 'init_textdomain' ) );
 
 				add_action( 'edit_user_profile', array( $this, 'show_meta_boxes' ), 1000, 1 );
 
@@ -64,6 +64,20 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 			}
 
 			return self::$instance;
+		}
+
+		public function init_textdomain() {
+
+			static $local_cache = null;
+
+			if ( null === $local_cache ) {
+
+				$local_cache = 'jsm-show-user-meta';
+
+				load_plugin_textdomain( 'jsm-show-user-meta', false, 'jsm-show-user-meta/languages/' );
+			}
+
+			return $local_cache;
 		}
 
 		/**
@@ -99,20 +113,6 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 				wp_die( '<p>' . sprintf( $notice_version_transl, $plugin_data[ 'Name' ], 'WordPress', self::$wp_min_version ) . ' ' . 
 					 sprintf( $notice_upgrade_transl, 'WordPress', $plugin_data[ 'Name' ] ) . '</p>' );
 			}
-		}
-
-		public static function init_textdomain() {
-
-			static $loaded = null;
-
-			if ( null !== $loaded ) {
-
-				return;
-			}
-
-			$loaded = true;
-
-			load_plugin_textdomain( 'jsm-show-user-meta', false, 'jsm-show-user-meta/languages/' );
 		}
 
 		public function show_meta_boxes( $user_obj ) {

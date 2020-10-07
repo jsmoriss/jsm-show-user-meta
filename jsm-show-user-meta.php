@@ -13,7 +13,7 @@
  * Requires PHP: 5.6
  * Requires At Least: 4.4
  * Tested Up To: 5.5.1
- * Version: 1.3.0-dev.1
+ * Version: 1.3.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -26,6 +26,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
+
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
@@ -157,6 +158,7 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 		public function show_user_metadata( $user_obj ) {
 
 			if ( empty( $user_obj->ID ) ) {
+
 				return;
 			}
 

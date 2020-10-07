@@ -34,11 +34,11 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 
 	class JSM_Show_User_Metadata {
 
+		private $view_cap;
+
+		private $wp_min_version = '4.4';
+
 		private static $instance = null;
-
-		private static $wp_min_version = '4.4';
-
-		public $view_cap;
 
 		private function __construct() {
 
@@ -47,7 +47,7 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 				/**
 				 * Check for the minimum required WordPress version.
 				 */
-				add_action( 'admin_init', array( __CLASS__, 'check_wp_min_version' ) );
+				add_action( 'admin_init', array( $this, 'check_wp_min_version' ) );
 
 				add_action( 'plugins_loaded', array( $this, 'init_textdomain' ) );
 
@@ -86,13 +86,13 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 		 *
 		 * If we don't have the minimum required version, then de-activate ourselves and die.
 		 */
-		public static function check_wp_min_version() {
+		public function check_wp_min_version() {
 
 			global $wp_version;
 
-			if ( version_compare( $wp_version, self::$wp_min_version, '<' ) ) {
+			if ( version_compare( $wp_version, $this->wp_min_version, '<' ) ) {
 
-				self::init_textdomain();	// If not already loaded, load the textdomain now.
+				$this->init_textdomain();	// If not already loaded, load the textdomain now.
 
 				$plugin = plugin_basename( __FILE__ );
 
@@ -111,7 +111,7 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 
 				deactivate_plugins( $plugin, $silent = true );
 
-				wp_die( '<p>' . sprintf( $notice_version_transl, $plugin_data[ 'Name' ], 'WordPress', self::$wp_min_version ) . ' ' . 
+				wp_die( '<p>' . sprintf( $notice_version_transl, $plugin_data[ 'Name' ], 'WordPress', $this->wp_min_version ) . ' ' . 
 					 sprintf( $notice_upgrade_transl, 'WordPress', $plugin_data[ 'Name' ] ) . '</p>' );
 			}
 		}

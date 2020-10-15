@@ -69,16 +69,7 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 
 		public function init_textdomain() {
 
-			static $local_cache = null;
-
-			if ( null === $local_cache ) {
-
-				$local_cache = 'jsm-show-user-meta';
-
-				load_plugin_textdomain( 'jsm-show-user-meta', false, 'jsm-show-user-meta/languages/' );
-			}
-
-			return $local_cache;
+			load_plugin_textdomain( 'jsm-show-user-meta', false, 'jsm-show-user-meta/languages/' );
 		}
 
 		/**

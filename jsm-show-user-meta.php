@@ -205,9 +205,12 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 					}
 				}
 
-				foreach ( $arr as $num => $el ) {
+				if ( is_array( $arr ) ) {	// Just in case.
 
-					$arr[ $num ] = maybe_unserialize( $el );
+					foreach ( $arr as $num => $el ) {
+
+						$arr[ $num ] = maybe_unserialize( $el );
+					}
 				}
 
 				$is_added = isset( $post_meta[ $meta_key ] ) ? false : true;

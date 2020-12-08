@@ -9,7 +9,7 @@ Assets URI: https://jsmoriss.github.io/jsm-show-user-meta/assets/
 Tags: meta, user meta, inspector, custom fields, debug, tools
 Contributors: jsmoriss
 Requires PHP: 5.6
-Requires At Least: 4.4
+Requires At Least: 4.5
 Tested Up To: 5.6
 Stable Tag: 1.3.0
 
@@ -30,7 +30,7 @@ There are no plugin settings &mdash; simply *install* and *activate* the plugin.
 = Related Plugins =
 
 * [JSM's Show Post Metadata](https://wordpress.org/plugins/jsm-show-post-meta/)
-* [JSM's Show Term Metadata](https://wordpress.org/plugins/jsm-show-term-meta/) (requires WordPress v4.4 or newer)
+* [JSM's Show Term Metadata](https://wordpress.org/plugins/jsm-show-term-meta/)
 
 == Installation ==
 
@@ -94,7 +94,7 @@ Maintenance release.
 	* None.
 * **Requires At Least**
 	* PHP v5.6.
-	* WordPress v4.4.
+	* WordPress v4.5.
 
 == Upgrade Notice ==
 

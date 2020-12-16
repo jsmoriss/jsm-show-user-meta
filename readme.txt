@@ -8,7 +8,7 @@ License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://jsmoriss.github.io/jsm-show-user-meta/assets/
 Tags: meta, user meta, inspector, custom fields, debug, tools
 Contributors: jsmoriss
-Requires PHP: 5.6
+Requires PHP: 7.0
 Requires At Least: 4.5
 Tested Up To: 5.6
 Stable Tag: 1.3.0
@@ -93,7 +93,7 @@ Maintenance release.
 * **Developer Notes**
 	* None.
 * **Requires At Least**
-	* PHP v5.6.
+	* PHP v7.0.
 	* WordPress v4.5.
 
 == Upgrade Notice ==

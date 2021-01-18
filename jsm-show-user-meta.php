@@ -36,7 +36,7 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 
 		private $view_cap;
 
-		private $wp_min_version = '4.4';
+		private $wp_min_version = '4.5';
 
 		private static $instance = null;	// JSM_Show_User_Metadata class object.
 
@@ -148,11 +148,9 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 				return;
 			}
 
-			$user_meta = get_user_meta( $user_obj->ID );
-
-			$user_meta_filtered = apply_filters( 'jsm_sum_user_meta', $user_meta, $user_obj );
-
-			$skip_keys = apply_filters( 'jsm_sum_skip_keys', array(
+			$user_meta            = get_user_meta( $user_obj->ID );
+			$user_meta_filtered   = apply_filters( 'jsm_sum_user_meta', $user_meta, $user_obj );
+			$skip_keys_preg_match = apply_filters( 'jsm_sum_skip_keys', array(
 				'/^closedpostboxes_/',
 				'/columnshidden$/',
 				'/^meta-box-order_/',
@@ -197,9 +195,9 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 
 			foreach( $user_meta_filtered as $meta_key => $arr ) {
 
-				foreach ( $skip_keys as $preg_dns ) {
+				foreach ( $skip_keys_preg_match as $preg_expr ) {
 
-					if ( preg_match( $preg_dns, $meta_key ) ) {
+					if ( preg_match( $preg_expr, $meta_key ) ) {
 
 						continue 2;
 					}

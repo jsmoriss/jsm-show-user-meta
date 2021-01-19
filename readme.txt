@@ -17,11 +17,11 @@ Show all user meta (aka custom fields) in a metabox on user editing pages -- a g
 
 == Description ==
 
-Wondering about the user meta your theme and/or plugins might be creating?
+**Wondering about the user meta your theme and/or plugins might be creating?**
 
-Want to find the name of a specific user meta key?
+**Want to find the name of a specific user meta key?**
 
-Need some help debugging your user meta (aka custom fields)?
+**Need some help debugging your user meta (aka custom fields)?**
 
 The JSM's Show User Metadata plugin displays all user meta keys and their unserialized values in a metabox at the bottom of user profile editing pages.
 

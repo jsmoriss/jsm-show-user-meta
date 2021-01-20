@@ -31,7 +31,7 @@ There are no plugin settings &mdash; simply *install* and *activate* the plugin.
 
 * [JSM's Show Comment Metadata](https://wordpress.org/plugins/jsm-show-comment-meta/)
 * [JSM's Show Post Metadata](https://wordpress.org/plugins/jsm-show-post-meta/)
-* [JSM's Show Term Metadata](https://wordpress.org/plugins/jsm-show-term-meta/)
+* [JSM's Show Term Metadata](https://wordpress.org/plugins/jsm-show-term-meta/) (ie. Categories and Tags)
 
 == Installation ==
 

@@ -159,7 +159,7 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 			) );
 
 			?>
-			<style>
+			<style type="text/css">
 				div#jsm-sum.postbox table {
 					width:100%;
 					max-width:100%;

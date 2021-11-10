@@ -13,7 +13,7 @@ Requires At Least: 5.0
 Tested Up To: 5.8.2
 Stable Tag: 1.3.0
 
-Show all user meta (aka custom fields) in a metabox on user editing pages -- a great tool for debugging issues with user meta.
+Show all user meta (aka custom fields) in a metabox on user editing pages &mdash; a great tool for debugging issues with user meta.
 
 == Description ==
 

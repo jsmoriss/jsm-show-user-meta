@@ -13,7 +13,7 @@
  * Requires PHP: 7.2
  * Requires At Least: 5.2
  * Tested Up To: 5.8.2
- * Version: 1.3.0
+ * Version: 2.0.0-dev.2
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -30,24 +30,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( 'These aren\'t the droids you\'re looking for.' );
 }
 
-if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
+if ( ! class_exists( 'JsmShowUserMeta' ) ) {
 
-	class JSM_Show_User_Metadata {
+	class JsmShowUserMeta {
 
-		private $view_cap;
-
-		private $wp_min_version = '5.2';
-
-		private static $instance = null;	// JSM_Show_User_Metadata class object.
+		private static $instance = null;	// JsmShowUserMeta class object.
 
 		private function __construct() {
 
 			if ( is_admin() ) {
-
-				/**
-				 * Check for the minimum required WordPress version.
-				 */
-				add_action( 'admin_init', array( $this, 'check_wp_min_version' ) );
 
 				add_action( 'plugins_loaded', array( $this, 'init_textdomain' ) );
 
@@ -72,39 +63,6 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 			load_plugin_textdomain( 'jsm-show-user-meta', false, 'jsm-show-user-meta/languages/' );
 		}
 
-		/**
-		 * Check for the minimum required WordPress version.
-		 *
-		 * If we don't have the minimum required version, then de-activate ourselves and die.
-		 */
-		public function check_wp_min_version() {
-
-			global $wp_version;
-
-			if ( version_compare( $wp_version, $this->wp_min_version, '<' ) ) {
-
-				$this->init_textdomain();	// If not already loaded, load the textdomain now.
-
-				$plugin = plugin_basename( __FILE__ );
-
-				if ( ! function_exists( 'deactivate_plugins' ) ) {
-
-					require_once trailingslashit( ABSPATH ) . 'wp-admin/includes/plugin.php';
-				}
-
-				$plugin_data = get_plugin_data( __FILE__, $markup = false );
-
-				$notice_version_transl = __( 'The %1$s plugin requires %2$s version %3$s or newer and has been deactivated.', 'jsm-show-user-meta' );
-
-				$notice_upgrade_transl = __( 'Please upgrade %1$s before trying to re-activate the %2$s plugin.', 'jsm-show-user-meta' );
-
-				deactivate_plugins( $plugin, $silent = true );
-
-				wp_die( '<p>' . sprintf( $notice_version_transl, $plugin_data[ 'Name' ], 'WordPress', $this->wp_min_version ) . ' ' . 
-					 sprintf( $notice_upgrade_transl, 'WordPress', $plugin_data[ 'Name' ] ) . '</p>' );
-			}
-		}
-
 		public function show_meta_boxes( $user_obj ) {
 
 			if ( ! isset( $user_obj->ID ) ) {	// Just in case.
@@ -114,16 +72,20 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 
 			$screen = get_current_screen();
 
-			$this->view_cap = apply_filters( 'jsm_sum_view_cap', 'manage_options' );
+			$view_cap = apply_filters( 'jsm_sum_view_cap', 'manage_options' );
 
-			if ( ! current_user_can( $this->view_cap, $user_obj->ID ) || ! apply_filters( 'jsm_sum_screen_base', true, $screen->base ) ) {
+			if ( ! current_user_can( $view_cap, $user_obj->ID ) ) {
+
+				return;
+			
+			} elseif ( ! apply_filters( 'jsm_sum_screen_base', true, $screen->base ) ) {
 
 				return;
 			}
 
-			$metabox_id      = 'jsm-sum';
+			$metabox_id      = 'jsmsum';
 			$metabox_title   = __( 'User Metadata', 'jsm-show-user-meta' );
-			$metabox_screen  = 'jsm-sum-user';
+			$metabox_screen  = 'jsm-show-user-meta';
 			$metabox_context = 'normal';
 			$metabox_prio    = 'low';
 			$callback_args   = array(	// Second argument passed to the callback function / method.
@@ -132,11 +94,11 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 
 			add_meta_box( $metabox_id, $metabox_title, array( $this, 'show_user_metadata' ), $metabox_screen, $metabox_context, $metabox_prio, $callback_args );
 
-			echo '<h3 id="jsm-sum-metaboxes">' . __( 'Show User Metadata', 'jsm-show-user-meta' ) . '</h3>';
+			echo '<h3 id="jsmsum-metaboxes">' . __( 'Show User Metadata', 'jsm-show-user-meta' ) . '</h3>';
 
 			echo '<div id="poststuff">';
 
-			do_meta_boxes( 'jsm-sum-user', 'normal', $user_obj );
+			do_meta_boxes( 'jsm-show-user-meta', 'normal', $user_obj );
 
 			echo '</div><!-- .poststuff -->';
 		}
@@ -160,27 +122,27 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 
 			?>
 			<style type="text/css">
-				div#jsm-sum.postbox table {
+				div#jsmsum.postbox table {
 					width:100%;
 					max-width:100%;
 					text-align:left;
 					table-layout:fixed;
 				}
-				div#jsm-sum.postbox table .key-column {
+				div#jsmsum.postbox table .key-column {
 					width:30%;
 				}
-				div#jsm-stm.postbox table tr.added-meta {
+				div#jsmsum.postbox table tr.added-meta {
 					background-color:#eee;
 				}
-				div#jsm-sum.postbox table td {
+				div#jsmsum.postbox table td {
 					padding:10px;
 					vertical-align:top;
 					border:1px dotted #ccc;
 				}
-				div#jsm-sum.postbox table td div {
+				div#jsmsum.postbox table td div {
 					overflow-x:auto;
 				}
-				div#jsm-sum.postbox table td div pre {
+				div#jsmsum.postbox table td div pre {
 					margin:0;
 					padding:0;
 				}
@@ -224,5 +186,5 @@ if ( ! class_exists( 'JSM_Show_User_Metadata' ) ) {
 		}
 	}
 
-	JSM_Show_User_Metadata::get_instance();
+	JsmShowUserMeta::get_instance();
 }

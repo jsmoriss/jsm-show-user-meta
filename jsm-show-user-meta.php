@@ -72,13 +72,13 @@ if ( ! class_exists( 'JsmShowUserMeta' ) ) {
 
 			$screen = get_current_screen();
 
-			$view_cap = apply_filters( 'jsm_sum_view_cap', 'manage_options' );
+			$view_cap = apply_filters( 'jsmsum_view_cap', 'manage_options' );
 
 			if ( ! current_user_can( $view_cap, $user_obj->ID ) ) {
 
 				return;
 			
-			} elseif ( ! apply_filters( 'jsm_sum_screen_base', true, $screen->base ) ) {
+			} elseif ( ! apply_filters( 'jsmsum_screen_base', true, $screen->base ) ) {
 
 				return;
 			}
@@ -111,8 +111,8 @@ if ( ! class_exists( 'JsmShowUserMeta' ) ) {
 			}
 
 			$user_meta            = get_user_meta( $user_obj->ID );
-			$user_meta_filtered   = apply_filters( 'jsm_sum_user_meta', $user_meta, $user_obj );
-			$skip_keys_preg_match = apply_filters( 'jsm_sum_skip_keys', array(
+			$user_meta_filtered   = apply_filters( 'jsmsum_user_meta', $user_meta, $user_obj );
+			$skip_keys_preg_match = apply_filters( 'jsmsum_skip_keys', array(
 				'/^closedpostboxes_/',
 				'/columnshidden$/',
 				'/^meta-box-order_/',

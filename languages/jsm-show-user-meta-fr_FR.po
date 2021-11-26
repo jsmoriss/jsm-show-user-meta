@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: JSM's Show User Meta 1.3.0\n"
+"Project-Id-Version: JSM's Show User Metadata 2.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/jsm-show-user-meta\n"
-"POT-Creation-Date: 2020-10-07 16:16-0700\n"
-"PO-Revision-Date: 2021-06-11 11:48-0700\n"
+"POT-Creation-Date: 2021-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2021-11-26 12:23-0800\n"
 "Last-Translator: JS Morisset <jsm@surniaulula.com>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -14,41 +14,33 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: jsm-show-user-meta.php:106
-msgid "The %1$s plugin requires %2$s version %3$s or newer and has been deactivated."
-msgstr "L'extension %1$s nécessite %2$s version %3$s ou plus récente et a été désactivée."
-
-#: jsm-show-user-meta.php:109
-msgid "Please upgrade %1$s before trying to re-activate the %2$s plugin."
-msgstr "Veuillez mettre à jour %1$s avant d'essayer de réactiver l'extension %2$s."
-
-#: jsm-show-user-meta.php:137
+#: lib/user.php:50
 msgid "User Metadata"
-msgstr "Métadata d'utilisateur"
+msgstr "Métadonnées d'utilisateur"
 
-#: jsm-show-user-meta.php:149
+#: lib/user.php:60
 msgid "Show User Metadata"
-msgstr "Show User Metadata"
+msgstr "Afficher métadonnées d'utilisateur"
 
-#: jsm-show-user-meta.php:206
+#: lib/user.php:83
 msgid "Key"
 msgstr "Clé"
 
-#: jsm-show-user-meta.php:208
+#: lib/user.php:84
 msgid "Value"
 msgstr "Valeur"
 
 #. Plugin Name of the plugin/theme
 msgid "JSM's Show User Metadata"
-msgstr "JSM's Show User Metadata"
+msgstr "Afficher métadonnées d'utilisateur de JSM"
 
 #. Plugin URI of the plugin/theme
 msgid "https://surniaulula.com/extend/plugins/jsm-show-user-meta/"
 msgstr "https://surniaulula.com/extend/plugins/jsm-show-user-meta/"
 
 #. Description of the plugin/theme
-msgid "Show all user meta (aka custom fields) keys and their unserialized values in a metabox on user profile editing pages."
-msgstr "Afficher les clés et valeurs des métas d'usager (aka champs personnalisés)  dans un metabox sur les pages d'édition."
+msgid "Show user metadata in a metabox when editing users - a great tool for debugging issues with user metadata."
+msgstr "Afficher les métadonnées d'utilisateur dans une métabox lors de l'édition d'utilisateurs - un excellent outil pour déboguer les problèmes avec les métadonnées d'utilisateurs."
 
 #. Author of the plugin/theme
 msgid "JS Morisset"
@@ -57,3 +49,12 @@ msgstr "JS Morisset"
 #. Author URI of the plugin/theme
 msgid "https://surniaulula.com/"
 msgstr "https://surniaulula.com/"
+
+#~ msgid "The %1$s plugin requires %2$s version %3$s or newer and has been deactivated."
+#~ msgstr "L'extension %1$s nécessite %2$s version %3$s ou plus récente et a été désactivée."
+
+#~ msgid "Please upgrade %1$s before trying to re-activate the %2$s plugin."
+#~ msgstr "Veuillez mettre à jour %1$s avant d'essayer de réactiver l'extension %2$s."
+
+#~ msgid "Show all user meta (aka custom fields) keys and their unserialized values in a metabox on user profile editing pages."
+#~ msgstr "Afficher les clés et valeurs des métas d'usager (aka champs personnalisés)  dans un metabox sur les pages d'édition."

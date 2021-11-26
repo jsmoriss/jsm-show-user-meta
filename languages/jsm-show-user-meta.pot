@@ -39,8 +39,8 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Show all user meta (aka custom fields) keys and their unserialized values in "
-"a metabox on user profile editing pages."
+"Show user metadata in a metabox when editing users - a great tool for "
+"debugging issues with user metadata."
 msgstr ""
 
 #. Author of the plugin/theme

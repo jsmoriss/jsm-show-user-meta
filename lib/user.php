@@ -35,13 +35,13 @@ if ( ! class_exists( 'JsmSumUser' ) ) {
 
 			$screen = get_current_screen();
 
-			$view_cap = apply_filters( 'jsmsum_view_cap', 'manage_options' );
+			$capability = apply_filters( 'jsmsum_add_metabox_capability', 'manage_options', $user_obj );
 
-			if ( ! current_user_can( $view_cap, $user_obj->ID ) ) {
+			if ( ! current_user_can( $capability, $user_obj->ID ) ) {
 
 				return;
 
-			} elseif ( ! apply_filters( 'jsmsum_screen_base', true, $screen->base ) ) {
+			} elseif ( ! apply_filters( 'jsmsum_add_metabox_screen_base', true, $screen->base ) ) {
 
 				return;
 			}

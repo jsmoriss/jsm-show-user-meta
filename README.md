@@ -2,7 +2,7 @@
 
 <table>
 <tr><th align="right" valign="top" nowrap>Plugin Name</th><td>JSM&#039;s Show User Metadata</td></tr>
-<tr><th align="right" valign="top" nowrap>Summary</th><td>Show all user meta (aka custom fields) in a metabox on user editing pages &mdash; a great tool for debugging issues with user meta.</td></tr>
+<tr><th align="right" valign="top" nowrap>Summary</th><td>Show user metadata in a metabox when editing users - a great tool for debugging issues with user metadata.</td></tr>
 <tr><th align="right" valign="top" nowrap>Stable Version</th><td>1.3.0</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires PHP</th><td>7.2 or newer</td></tr>
 <tr><th align="right" valign="top" nowrap>Requires WordPress</th><td>5.2 or newer</td></tr>
@@ -29,7 +29,7 @@
 <ul>
 <li><a href="https://wordpress.org/plugins/jsm-show-comment-meta/">JSM's Show Comment Metadata</a></li>
 <li><a href="https://wordpress.org/plugins/jsm-show-post-meta/">JSM's Show Post Metadata</a></li>
-<li><a href="https://wordpress.org/plugins/jsm-show-term-meta/">JSM's Show Term Metadata</a> (ie. Categories and Tags)</li>
+<li><a href="https://wordpress.org/plugins/jsm-show-term-meta/">JSM's Show Term Metadata</a></li>
 </ul>
 
 

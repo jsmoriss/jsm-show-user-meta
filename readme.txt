@@ -13,7 +13,7 @@ Requires At Least: 5.2
 Tested Up To: 5.8.2
 Stable Tag: 1.3.0
 
-Show all user meta (aka custom fields) in a metabox on user editing pages &mdash; a great tool for debugging issues with user meta.
+Show user metadata in a metabox when editing users - a great tool for debugging issues with user metadata.
 
 == Description ==
 
@@ -31,7 +31,7 @@ There are no plugin settings - simply *install* and *activate* the plugin.
 
 * [JSM's Show Comment Metadata](https://wordpress.org/plugins/jsm-show-comment-meta/)
 * [JSM's Show Post Metadata](https://wordpress.org/plugins/jsm-show-post-meta/)
-* [JSM's Show Term Metadata](https://wordpress.org/plugins/jsm-show-term-meta/) (ie. Categories and Tags)
+* [JSM's Show Term Metadata](https://wordpress.org/plugins/jsm-show-term-meta/)
 
 == Installation ==
 

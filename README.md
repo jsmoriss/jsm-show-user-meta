@@ -30,6 +30,7 @@
 <li><a href="https://wordpress.org/plugins/jsm-show-comment-meta/">JSM's Show Comment Metadata</a></li>
 <li><a href="https://wordpress.org/plugins/jsm-show-post-meta/">JSM's Show Post Metadata</a></li>
 <li><a href="https://wordpress.org/plugins/jsm-show-term-meta/">JSM's Show Term Metadata</a></li>
+<li><a href="https://wordpress.org/plugins/jsm-show-registered-shortcodes/">JSM's Show Registered Shortcodes</a></li>
 </ul>
 
 

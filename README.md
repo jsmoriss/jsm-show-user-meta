@@ -16,9 +16,9 @@
 
 <p><strong>The JSM's Show User Metadata plugin displays user profile meta keys and their unserialized values in a metabox at the bottom of user profile editing pages.</strong></p>
 
-<p>The current user must have the <a href="https://wordpress.org/support/article/roles-and-capabilities/#manage_options">WordPress 'manage_options' capability</a> (allows access to administration options) to view the User Metadata metabox, and the 'manage_options' capability to delete individual meta keys.</p>
+<p>The current user must have the <a href="https://wordpress.org/support/article/roles-and-capabilities/#manage_options">WordPress <em>manage_options</em> capability</a> (allows access to administration options) to view the User Metadata metabox, and the <em>manage_options</em> capability to delete individual meta keys.</p>
 
-<p>The default 'manage_options' capability can be modified using the 'jsmsum_show_metabox_capability' and 'jsmsum_delete_meta_capability' filters (see filters.txt in the plugin folder).</p>
+<p>The default <em>manage_options</em> capability can be modified using the 'jsmsum_show_metabox_capability' and 'jsmsum_delete_meta_capability' filters (see filters.txt in the plugin folder).</p>
 
 <p>There are no plugin settings - simply <em>install</em> and <em>activate</em> the plugin.</p>
 

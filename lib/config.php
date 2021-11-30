@@ -17,7 +17,7 @@ if ( ! class_exists( 'JsmSumConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'jsmsum' => array(			// Plugin acronym.
-					'version'     => '2.0.0',	// Plugin version.
+					'version'     => '3.0.0-dev.2',	// Plugin version.
 					'slug'        => 'jsm-show-user-meta',
 					'base'        => 'jsm-show-user-meta/jsm-show-user-meta.php',
 					'text_domain' => 'jsm-show-user-meta',
@@ -74,6 +74,7 @@ if ( ! class_exists( 'JsmSumConfig' ) ) {
 			require_once JSMSUM_PLUGINDIR . 'lib/com/util.php';
 			require_once JSMSUM_PLUGINDIR . 'lib/com/util-metabox.php';
 			require_once JSMSUM_PLUGINDIR . 'lib/com/util-wp.php';
+			require_once JSMSUM_PLUGINDIR . 'lib/script.php';
 			require_once JSMSUM_PLUGINDIR . 'lib/user.php';
 
 			add_filter( 'jsmsum_load_lib', array( __CLASS__, 'load_lib' ), 10, 3 );

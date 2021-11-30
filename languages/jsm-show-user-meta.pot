@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the JSM's Show User Metadata package.
 msgid ""
 msgstr ""
-"Project-Id-Version: JSM's Show User Metadata 2.0.0\n"
+"Project-Id-Version: JSM's Show User Metadata 3.0.0-dev.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/jsm-show-user-"
 "meta\n"
 "POT-Creation-Date: 2021-MO-DA HO:MI+ZONE\n"
@@ -13,6 +13,10 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
+#: lib/script.php:61
+msgid "Unable to delete meta key '{1}' for user ID {0}."
+msgstr ""
+
 #: lib/user.php:50
 msgid "User Metadata"
 msgstr ""
@@ -21,11 +25,11 @@ msgstr ""
 msgid "Show User Metadata"
 msgstr ""
 
-#: lib/user.php:83
+#: lib/user.php:87
 msgid "Key"
 msgstr ""
 
-#: lib/user.php:84
+#: lib/user.php:88
 msgid "Value"
 msgstr ""
 

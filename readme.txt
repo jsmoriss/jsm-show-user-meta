@@ -6,7 +6,7 @@ Domain Path: /languages
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl.txt
 Assets URI: https://jsmoriss.github.io/jsm-show-user-meta/assets/
-Tags: meta, user meta, profile meta, delete, debug
+Tags: meta, user meta, profile meta, delete, debug, inspector
 Contributors: jsmoriss
 Requires PHP: 7.2
 Requires At Least: 5.2

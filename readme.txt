@@ -78,7 +78,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.0.0-rc.1 (2021/11/30)**
+**Version 3.0.0 (2021/11/30)**
 
 * **New Features**
 	* Added the ability to delete individual user meta.
@@ -108,7 +108,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.0.0-rc.1 =
+= 3.0.0 =
 
 (2021/11/30) Added the ability to delete individual user meta.
 

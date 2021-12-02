@@ -20,7 +20,7 @@
 
 <p>The default <em>manage_options</em> capability can be modified using the 'jsmsum_show_metabox_capability' and 'jsmsum_delete_meta_capability' filters (see filters.txt in the plugin folder).</p>
 
-<p>There are no plugin settings - simply <em>install</em> and <em>activate</em> the plugin.</p>
+<p>There are no plugin settings - simply install and activate the plugin.</p>
 
 <h4>Related Plugins</h4>
 

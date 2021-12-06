@@ -106,7 +106,7 @@ if ( ! class_exists( 'JsmSumUser' ) ) {
 
 				die( -1 );
 			}
-	
+
 			$metabox_id   = 'jsmsum';
 			$obj_id       = sanitize_key( $_POST[ 'obj_id' ] );
 			$meta_key     = sanitize_key( $_POST[ 'meta_key' ] );

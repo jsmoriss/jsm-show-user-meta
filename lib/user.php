@@ -57,12 +57,11 @@ if ( ! class_exists( 'JsmSumUser' ) ) {
 
 			add_meta_box( $metabox_id, $metabox_title, array( $this, 'show_metabox' ), $metabox_screen, $metabox_context, $metabox_prio, $callback_args );
 
-			echo '<h3 id="jsmsum-metaboxes">' . __( 'Show User Metadata', 'jsm-show-user-meta' ) . '</h3>';
-			echo '<div id="poststuff">';
+			echo '<div class="metabox-holder">' . "\n";
 
 			do_meta_boxes( $metabox_screen, 'normal', $user_obj );
 
-			echo '</div><!-- .poststuff -->';
+			echo "\n" . '</div><!-- .metabox-holder -->' . "\n";
 		}
 
 		public function show_metabox( $user_obj ) {

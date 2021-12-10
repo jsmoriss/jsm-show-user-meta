@@ -106,13 +106,17 @@ if ( ! class_exists( 'JsmSumUser' ) ) {
 				die( -1 );
 			}
 
+			/**
+			 * Note that the $table_row_id value must match the value used in SucomUtilMetabox::get_table_metadata(),
+			 * so that jQuery can hide the table row after a successful delete.
+			 */
 			$metabox_id   = 'jsmsum';
 			$obj_id       = sanitize_key( $_POST[ 'obj_id' ] );
 			$meta_key     = sanitize_key( $_POST[ 'meta_key' ] );
+			$table_row_id = sanitize_key( $metabox_id . '_' . $obj_id . '_' . $meta_key );
 			$user_obj     = get_userdata( $obj_id );
 			$del_meta_cap = apply_filters( 'jsmsum_delete_meta_capability', 'manage_options', $user_obj );
 			$can_del_meta = current_user_can( $del_meta_cap, $obj_id );
-			$hide_row_id  = $metabox_id . '-' . $obj_id . '-' . $meta_key;
 
 			if ( ! $can_del_meta ) {
 
@@ -121,7 +125,7 @@ if ( ! class_exists( 'JsmSumUser' ) ) {
 
 			if ( delete_user_meta( $obj_id, $meta_key ) ) {
 
-				die( $hide_row_id );
+				die( $table_row_id );
 			}
 
 			die( false );	// Show delete failed message.

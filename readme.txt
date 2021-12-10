@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 7.2
 Requires At Least: 5.2
 Tested Up To: 5.8.2
-Stable Tag: 3.0.1
+Stable Tag: 3.0.2
 
 Show user metadata in a metabox when editing users - a great tool for debugging issues with user metadata.
 
@@ -85,7 +85,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 * **New Features**
 	* None.
 * **Improvements**
-	* Added a `trim()` to the returned table row id after successful delete, in case the returned value is corrupted by a leading/trailing space.
+	* Added a `trim()` to the returned CSS id after successful delete, in case the value is corrupted with a space or newline.
 * **Bugfixes**
 	* None.
 * **Developer Notes**
@@ -140,7 +140,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 3.0.2 =
 
-(2021/12/10) Added a `trim()` to the returned table row id after successful delete, in case the returned value is corrupted by a leading/trailing space.
+(2021/12/10) Added a `trim()` to the returned CSS id after successful delete, in case the value is corrupted with a space or newline.
 
 = 3.0.1 =
 

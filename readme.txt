@@ -34,28 +34,6 @@ There are no plugin settings - simply install and activate the plugin.
 
 == Installation ==
 
-= Automated Install =
-
-1. Go to the wp-admin/ section of your website.
-1. Select the *Plugins* menu item.
-1. Select the *Add New* sub-menu item.
-1. In the *Search* box, enter the plugin name.
-1. Click the *Search Plugins* button.
-1. Click the *Install Now* link for the plugin.
-1. Click the *Activate Plugin* link.
-
-= Semi-Automated Install =
-
-1. Download the plugin ZIP file.
-1. Go to the wp-admin/ section of your website.
-1. Select the *Plugins* menu item.
-1. Select the *Add New* sub-menu item.
-1. Click on *Upload* link (just under the Install Plugins page title).
-1. Click the *Browse...* button.
-1. Navigate your local folders / directories and choose the ZIP file you downloaded previously.
-1. Click on the *Install Now* button.
-1. Click the *Activate Plugin* link.
-
 == Frequently Asked Questions ==
 
 == Screenshots ==

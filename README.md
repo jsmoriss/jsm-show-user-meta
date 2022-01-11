@@ -60,9 +60,3 @@
 <li>Click the <em>Activate Plugin</em> link.</li>
 </ol>
 
-
-<h2>Frequently Asked Questions</h2>
-
-
-
-

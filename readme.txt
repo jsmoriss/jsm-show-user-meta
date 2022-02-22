@@ -10,7 +10,7 @@ Tags: meta, user meta, profile meta, delete, debug, inspector
 Contributors: jsmoriss
 Requires PHP: 7.2
 Requires At Least: 5.2
-Tested Up To: 5.9.0
+Tested Up To: 5.9.1
 Stable Tag: 3.0.2
 
 Show user metadata in a metabox when editing users - a great tool for debugging issues with user metadata.

@@ -11,7 +11,7 @@ Contributors: jsmoriss
 Requires PHP: 7.2
 Requires At Least: 5.2
 Tested Up To: 6.0.2
-Stable Tag: 3.0.4
+Stable Tag: 3.0.5
 
 Show user metadata in a metabox when editing users - a great tool for debugging issues with user metadata.
 

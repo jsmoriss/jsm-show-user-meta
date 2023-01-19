@@ -106,7 +106,7 @@ if ( ! class_exists( 'JsmSumUser' ) ) {
 				die( -1 );
 			}
 
-			/**
+			/*
 			 * Note that the $table_row_id value must match the value used in SucomUtilMetabox::get_table_metadata(),
 			 * so that jQuery can hide the table row after a successful delete.
 			 */

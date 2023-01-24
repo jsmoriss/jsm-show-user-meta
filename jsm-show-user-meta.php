@@ -11,7 +11,7 @@
  * License URI: https://www.gnu.org/licenses/gpl.txt
  * Description: Show user metadata in a metabox when editing users - a great tool for debugging issues with user metadata.
  * Requires PHP: 7.2
- * Requires At Least: 5.2
+ * Requires At Least: 5.4
  * Tested Up To: 6.1.1
  * Version: 3.0.7
  *

@@ -9,7 +9,7 @@ Assets URI: https://jsmoriss.github.io/jsm-show-user-meta/assets/
 Tags: meta, user meta, profile meta, delete, debug, inspector
 Contributors: jsmoriss
 Requires PHP: 7.2
-Requires At Least: 5.2
+Requires At Least: 5.4
 Tested Up To: 6.1.1
 Stable Tag: 3.0.7
 
@@ -70,7 +70,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Update for SucomUtil library class.
 * **Requires At Least**
 	* PHP v7.2.
-	* WordPress v5.2.
+	* WordPress v5.4.
 
 **Version 3.0.6 (2022/10/20)**
 

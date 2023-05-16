@@ -1,5 +1,5 @@
-=== JSM's Show User Metadata ===
-Plugin Name: JSM's Show User Metadata
+=== JSM Show User Metadata ===
+Plugin Name: JSM Show User Metadata
 Plugin Slug: jsm-show-user-meta
 Text Domain: jsm-show-user-meta
 Domain Path: /languages
@@ -17,7 +17,7 @@ Show user metadata in a metabox when editing users - a great tool for debugging 
 
 == Description ==
 
-**The JSM's Show User Metadata plugin displays user profile meta keys and their unserialized values in a metabox at the bottom of user profile editing pages.**
+**The JSM Show User Metadata plugin displays user profile meta keys and their unserialized values in a metabox at the bottom of user profile editing pages.**
 
 The current user must have the [WordPress *manage_options* capability](https://wordpress.org/support/article/roles-and-capabilities/#manage_options) (allows access to administration options) to view the User Metadata metabox, and the *manage_options* capability to delete individual meta keys.
 
@@ -27,10 +27,10 @@ There are no plugin settings - simply install and activate the plugin.
 
 = Related Plugins =
 
-* [JSM's Show Comment Metadata](https://wordpress.org/plugins/jsm-show-comment-meta/)
-* [JSM's Show Post Metadata](https://wordpress.org/plugins/jsm-show-post-meta/)
-* [JSM's Show Term Metadata](https://wordpress.org/plugins/jsm-show-term-meta/)
-* [JSM's Show Registered Shortcodes](https://wordpress.org/plugins/jsm-show-registered-shortcodes/)
+* [JSM Show Comment Metadata](https://wordpress.org/plugins/jsm-show-comment-meta/)
+* [JSM Show Post Metadata](https://wordpress.org/plugins/jsm-show-post-meta/)
+* [JSM Show Term Metadata](https://wordpress.org/plugins/jsm-show-term-meta/)
+* [JSM Show Registered Shortcodes](https://wordpress.org/plugins/jsm-show-registered-shortcodes/)
 
 == Installation ==
 

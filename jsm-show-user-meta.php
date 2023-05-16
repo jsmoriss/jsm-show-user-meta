@@ -1,6 +1,6 @@
 <?php
 /*
- * Plugin Name: JSM's Show User Metadata
+ * Plugin Name: JSM Show User Metadata
  * Text Domain: jsm-show-user-meta
  * Domain Path: /languages
  * Plugin URI: https://surniaulula.com/extend/plugins/jsm-show-user-meta/

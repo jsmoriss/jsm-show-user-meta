@@ -77,7 +77,7 @@ if ( ! class_exists( 'JsmSumUser' ) ) {
 			}
 
 			$cf          = JsmSumConfig::get_config();
-			$user_meta   = get_user_meta( $user_obj->ID );
+			$user_meta   = get_metadata( 'user', $user_obj->ID );
 			$skip_keys   = array( '/^closedpostboxes_/', '/columnshidden$/', '/^meta-box-order_/', '/^metaboxhidden_/', '/^screen_layout_/' );
 			$metabox_id  = 'jsmsum';
 			$admin_l10n  = $cf[ 'plugin' ][ 'jsmsum' ][ 'admin_l10n' ];
@@ -123,7 +123,7 @@ if ( ! class_exists( 'JsmSumUser' ) ) {
 				die( -1 );
 			}
 
-			if ( delete_user_meta( $obj_id, $meta_key ) ) {
+			if ( delete_metadata( 'user', $obj_id, $meta_key ) ) {
 
 				die( $table_row_id );
 			}

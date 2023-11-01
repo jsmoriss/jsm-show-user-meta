@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the JSM Show User Metadata package.
 msgid ""
 msgstr ""
-"Project-Id-Version: JSM Show User Metadata 3.4.0\n"
+"Project-Id-Version: JSM Show User Metadata 3.5.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/jsm-show-user-"
 "meta\n"
 "POT-Creation-Date: 2023-MO-DA HO:MI+ZONE\n"
@@ -21,11 +21,11 @@ msgstr ""
 msgid "User Metadata"
 msgstr ""
 
-#: lib/user.php:86
+#: lib/user.php:87
 msgid "Key"
 msgstr ""
 
-#: lib/user.php:87
+#: lib/user.php:88
 msgid "Value"
 msgstr ""
 

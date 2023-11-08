@@ -58,7 +58,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.6.0 (2023/11/08)**
+**Version 3.6.0 (2023/11/07)**
 
 * **New Features**
 	* None.
@@ -76,5 +76,5 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 = 3.6.0 =
 
-(2023/11/08) Update for the `SucomUtil` and `SuextMinifyCssCompressor` class.
+(2023/11/07) Update for the `SucomUtil` and `SuextMinifyCssCompressor` class.
 

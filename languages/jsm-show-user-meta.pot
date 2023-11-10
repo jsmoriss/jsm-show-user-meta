@@ -17,15 +17,15 @@ msgstr ""
 msgid "Unable to delete meta key '{1}' for user ID {0}."
 msgstr ""
 
-#: lib/user.php:50
+#: lib/user.php:51
 msgid "User Metadata"
 msgstr ""
 
-#: lib/user.php:87
+#: lib/user.php:89
 msgid "Key"
 msgstr ""
 
-#: lib/user.php:88
+#: lib/user.php:90
 msgid "Value"
 msgstr ""
 

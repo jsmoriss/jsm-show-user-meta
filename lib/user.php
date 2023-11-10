@@ -28,14 +28,15 @@ if ( ! class_exists( 'JsmSumUser' ) ) {
 
 		public function add_meta_boxes( $user_obj ) {
 
-			if ( ! isset( $user_obj->ID ) ) {	// Just in case.
+			if ( ! empty( $user_obj->ID ) ) {
 
-				return;
-			}
+				$user_id = $user_obj->ID;
+
+			} else return;
 
 			$screen        = get_current_screen();
 			$show_meta_cap = apply_filters( 'jsmsum_show_metabox_capability', 'manage_options', $user_obj );
-			$can_show_meta = current_user_can( $show_meta_cap, $user_obj->ID );
+			$can_show_meta = current_user_can( $show_meta_cap, $user_id );
 
 			if ( ! $can_show_meta ) {
 
@@ -72,13 +73,14 @@ if ( ! class_exists( 'JsmSumUser' ) ) {
 
 		public function get_metabox( $user_obj ) {
 
-			if ( empty( $user_obj->ID ) ) {
+			if ( ! empty( $user_obj->ID ) ) {
 
-				return;
-			}
+				$user_id = $user_obj->ID;
+
+			} else return;
 
 			$cf          = JsmSumConfig::get_config();
-			$user_meta   = get_metadata( 'user', $user_obj->ID );
+			$user_meta   = get_metadata( 'user', $user_id );
 			$skip_keys   = array( '/^closedpostboxes_/', '/columnshidden$/', '/^meta-box-order_/', '/^metaboxhidden_/', '/^screen_layout_/' );
 			$metabox_id  = 'jsmsum';
 			$admin_l10n  = $cf[ 'plugin' ][ 'jsmsum' ][ 'admin_l10n' ];
@@ -88,7 +90,7 @@ if ( ! class_exists( 'JsmSumUser' ) ) {
 				'value' => __( 'Value', 'jsm-show-user-meta' ),
 			);
 
-			return SucomUtilMetabox::get_table_metadata( $user_meta, $skip_keys, $user_obj, $user_obj->ID, $metabox_id, $admin_l10n, $titles );
+			return SucomUtilMetabox::get_table_metadata( $user_meta, $skip_keys, $user_obj, $user_id, $metabox_id, $admin_l10n, $titles );
 		}
 
 		public function ajax_delete_meta() {

@@ -58,7 +58,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 3.9.0 (2023/12/18)**
+**Version 3.10.0 (2024/01/06)**
 
 * **New Features**
 	* None.
@@ -74,7 +74,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 3.9.0 =
+= 3.10.0 =
 
-(2023/12/18) Update for the `SucomUtil` class.
+(2024/01/06) Update for the `SucomUtil` class.
 

@@ -124,9 +124,8 @@ if ( ! class_exists( 'JsmSumUser' ) ) {
 			if ( ! $can_del_meta ) {
 
 				die( -1 );
-			}
 
-			if ( delete_metadata( 'user', $obj_id, $meta_key ) ) {
+			} elseif ( delete_metadata( 'user', $obj_id, $meta_key ) ) {
 
 				die( $table_row_id );
 			}

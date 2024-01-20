@@ -13,7 +13,7 @@
  * Requires PHP: 7.2.34
  * Requires At Least: 5.8
  * Tested Up To: 6.4.2
- * Version: 3.11.0
+ * Version: 4.0.0-dev.1
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]
  *
@@ -45,7 +45,6 @@ if ( ! class_exists( 'JsmSum' ) ) {
 			require_once $plugin_dir . 'lib/config.php';
 
 			JsmSumConfig::set_constants( __FILE__ );
-
 			JsmSumConfig::require_libs( __FILE__ );
 
 			add_action( 'init', array( $this, 'init_textdomain' ) );

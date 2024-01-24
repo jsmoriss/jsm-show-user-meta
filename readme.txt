@@ -21,7 +21,7 @@ The JSM Show User Metadata plugin displays user profile meta keys and their unse
 
 There are no plugin settings - simply install and activate the plugin.
 
-= Available Filters =
+= Available Filters for Developers =
 
 Filter the user meta shown in the metabox:
 

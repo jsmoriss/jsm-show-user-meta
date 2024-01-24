@@ -18,7 +18,7 @@
 
 <p>There are no plugin settings - simply install and activate the plugin.</p>
 
-<h4>Available Filters</h4>
+<h4>Available Filters for Developers</h4>
 
 <p>Filter the user meta shown in the metabox:</p>
 

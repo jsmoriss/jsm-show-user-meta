@@ -1,7 +1,7 @@
 
 'jsmsum_metabox_table_metadata' ( array $metadata, $user_obj )		// Filter the user meta shown in the metabox.
 
-'jsmsum_metabox_table_skip_keys' ( array $skip_keys, $user_obj )	// Array of regular expressions to exclude meta keys.
+'jsmsum_metabox_table_exclude_keys' ( array $exclude_keys, $user_obj )	// Array of regular expressions to exclude meta keys.
 
 'jsmsum_show_metabox_capability' ( 'manage_options', $user_obj )	// Capability required to show user meta.
 

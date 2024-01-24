@@ -78,19 +78,19 @@ if ( ! class_exists( 'JsmSumUser' ) ) {
 				return;
 			}
 
-			$user_id    = $obj->ID;
-			$cf         = JsmSumConfig::get_config();
-			$metadata   = get_metadata( 'user', $user_id );
-			$skip_keys  = array();
-			$metabox_id = 'jsmsum';
-			$admin_l10n = $cf[ 'plugin' ][ 'jsmsum' ][ 'admin_l10n' ];
+			$user_id      = $obj->ID;
+			$cf           = JsmSumConfig::get_config();
+			$metadata     = get_metadata( 'user', $user_id );
+			$exclude_keys = array();
+			$metabox_id   = 'jsmsum';
+			$admin_l10n   = $cf[ 'plugin' ][ 'jsmsum' ][ 'admin_l10n' ];
 
 			$titles = array(
 				'key'   => __( 'Key', 'jsm-show-user-meta' ),
 				'value' => __( 'Value', 'jsm-show-user-meta' ),
 			);
 
-			return SucomUtilMetabox::get_table_metadata( $metadata, $skip_keys, $obj, $user_id, $metabox_id, $admin_l10n, $titles );
+			return SucomUtilMetabox::get_table_metadata( $metadata, $exclude_keys, $obj, $user_id, $metabox_id, $admin_l10n, $titles );
 		}
 
 		public function ajax_delete_meta() {

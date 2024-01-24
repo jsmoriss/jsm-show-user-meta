@@ -29,7 +29,7 @@ Filter the user meta shown in the metabox:
 
 Array of regular expressions to exclude meta keys:
 
-<pre><code>'jsmsum_metabox_table_skip_keys' ( array $skip_keys, $user_obj )</code></pre>
+<pre><code>'jsmsum_metabox_table_exclude_keys' ( array $exclude_keys, $user_obj )</code></pre>
 
 Capability required to show user meta:
 

@@ -73,10 +73,7 @@ if ( ! class_exists( 'JsmSumUser' ) ) {
 
 		public function get_metabox( WP_User $obj ) {
 
-			if ( empty( $obj->ID ) ) {
-				
-				return;
-			}
+			if ( empty( $obj->ID ) ) return;
 
 			$user_id      = $obj->ID;
 			$cf           = JsmSumConfig::get_config();
@@ -97,17 +94,11 @@ if ( ! class_exists( 'JsmSumUser' ) ) {
 
 			$doing_ajax = SucomUtilWP::doing_ajax();
 
-			if ( ! $doing_ajax ) {	// Just in case.
-
-				return;
-			}
+			if ( ! $doing_ajax ) return;
 
 			check_ajax_referer( JSMSUM_NONCE_NAME, '_ajax_nonce', $die = true );
 
-			if ( empty( $_POST[ 'obj_id' ] ) || empty( $_POST[ 'meta_key' ] ) ) {
-
-				die( -1 );
-			}
+			if ( empty( $_POST[ 'obj_id' ] ) || empty( $_POST[ 'meta_key' ] ) ) die( -1 );
 
 			/*
 			 * Note that the $table_row_id value must match the value used in SucomUtilMetabox::get_table_metadata(),
@@ -121,14 +112,9 @@ if ( ! class_exists( 'JsmSumUser' ) ) {
 			$delete_cap   = apply_filters( 'jsmsum_delete_meta_capability', 'manage_options', $user_obj );
 			$can_delete   = current_user_can( $delete_cap, $obj_id, $user_obj );
 
-			if ( ! $can_delete ) {
+			if ( ! $can_delete ) die( -1 );
 
-				die( -1 );
-
-			} elseif ( delete_metadata( 'user', $obj_id, $meta_key ) ) {
-
-				die( $table_row_id );
-			}
+			if ( delete_metadata( 'user', $obj_id, $meta_key ) ) die( $table_row_id );
 
 			die( false );	// Show delete failed message.
 		}

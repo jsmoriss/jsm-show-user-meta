@@ -21,11 +21,11 @@ msgstr ""
 msgid "User Metadata"
 msgstr ""
 
-#: lib/user.php:89
+#: lib/user.php:86
 msgid "Key"
 msgstr ""
 
-#: lib/user.php:90
+#: lib/user.php:87
 msgid "Value"
 msgstr ""
 

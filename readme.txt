@@ -82,7 +82,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 <h3>Changelog / Release Notes</h3>
 
-**Version 4.2.0-rc.1 (2024/03/10)**
+**Version 4.2.0 (2024/03/10)**
 
 * **New Features**
 	* None.
@@ -129,7 +129,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
-= 4.2.0-rc.1 =
+= 4.2.0 =
 
 (2024/03/10) Added extra sanitation.
 

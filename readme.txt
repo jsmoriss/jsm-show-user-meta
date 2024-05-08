@@ -10,7 +10,7 @@ Tags: users, custom fields, metadata, profile, inspector
 Contributors: jsmoriss
 Requires PHP: 7.2.34
 Requires At Least: 5.8
-Tested Up To: 6.5.2
+Tested Up To: 6.5.3
 Stable Tag: 4.3.0
 
 Show user metadata in a metabox when editing users - a great tool for debugging issues with user metadata.

@@ -12,7 +12,7 @@
  * Description: Show user metadata in a metabox when editing users - a great tool for debugging issues with user metadata.
  * Requires PHP: 7.2.34
  * Requires At Least: 5.8
- * Tested Up To: 6.6.1
+ * Tested Up To: 6.6.2
  * Version: 4.6.0
  *
  * Version Numbering: {major}.{minor}.{bugfix}[-{stage}.{level}]

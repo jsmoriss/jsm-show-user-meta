@@ -105,7 +105,7 @@ if ( ! class_exists( 'JsmSumUser' ) ) {
 			 * so that jQuery can hide the table row after a successful delete.
 			 */
 			$metabox_id   = 'jsmsum';
-			$obj_id       = SucomUtil::sanitize_int( $_POST[ 'obj_id' ] );
+			$obj_id       = SucomUtil::sanitize_int( $_POST[ 'obj_id' ] );	// Returns integer or null.
 			$meta_key     = SucomUtil::sanitize_meta_key( $_POST[ 'meta_key' ] );
 			$table_row_id = SucomUtil::sanitize_key( $metabox_id . '_' . $obj_id . '_' . $meta_key );
 			$user_obj     = get_userdata( $obj_id );

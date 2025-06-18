@@ -17,7 +17,7 @@ if ( ! class_exists( 'JsmSumConfig' ) ) {
 		public static $cf = array(
 			'plugin' => array(
 				'jsmsum' => array(			// Plugin acronym.
-					'version'     => '4.6.3',	// Plugin version.
+					'version'     => '4.7.0',	// Plugin version.
 					'slug'        => 'jsm-show-user-meta',
 					'base'        => 'jsm-show-user-meta/jsm-show-user-meta.php',
 					'text_domain' => 'jsm-show-user-meta',

@@ -9,7 +9,7 @@ Assets URI: https://jsmoriss.github.io/jsm-show-user-meta/assets/
 Tags: users, custom fields, metadata, profile, inspector
 Contributors: jsmoriss
 Requires PHP: 7.4.33
-Requires At Least: 5.9
+Requires At Least: 6.0
 Tested Up To: 6.9
 Stable Tag: 4.8.0
 
@@ -94,7 +94,7 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 	* Updated the `SucomUtil` class.
 * **Requires At Least**
 	* PHP v7.4.33.
-	* WordPress v5.9.
+	* WordPress v6.0.
 
 == Upgrade Notice ==
 

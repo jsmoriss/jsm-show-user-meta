@@ -106,7 +106,7 @@ if ( ! class_exists( 'JsmSumUser' ) ) {
 			 */
 			$metabox_id   = 'jsmsum';
 			$obj_id       = SucomUtil::sanitize_int( $_POST[ 'obj_id' ] );		// Returns integer or null.
-			$meta_key     = SucomUtil::sanitize_meta_key( $_POST[ 'meta_key' ] );	// Decode/remove html/js/css and quotes.
+			$meta_key     = SucomUtil::sanitize_meta_key( $_POST[ 'meta_key' ] );	// Decode and remove html/js/css and quotes.
 			$table_row_id = SucomUtil::sanitize_key( $metabox_id . '_' . $obj_id . '_' . $meta_key );
 			$user_obj     = get_userdata( $obj_id );
 			$delete_cap   = apply_filters( 'jsmsum_delete_meta_capability', 'manage_options', $user_obj );

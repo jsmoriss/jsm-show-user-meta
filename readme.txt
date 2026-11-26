@@ -126,6 +126,10 @@ Version components: `{major}.{minor}.{bugfix}[-{stage}.{level}]`
 
 == Upgrade Notice ==
 
+= 4.9.2 =
+
+(2026/11/25) Fixed `SucomUtil::get_multi_values()` to include non-suffixed (ie. non-multi) option keys.
+
 = 4.9.1 =
 
 (2026/09/12) Fixed removal of quote characters from meta key names.
